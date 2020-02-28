@@ -1,7 +1,8 @@
 Vue.mixin ({
     data() {
         return {
-            jsonFiles: 'http://192.168.86.22:8080/includes/my-portfolio.json',
+            // jsonFiles: 'http://192.168.86.22:8080/includes/my-portfolio.json',
+            jsonFiles: 'https://meltz.github.io/includes/my-portfolio.json',
             myPortfolio: [],
             loading: true,
             errored: false,
@@ -34,7 +35,7 @@ const Home = {
                     <div :id="'p' + project.id" class="project">
                         <router-link :to="'/project/' + project.slug">
                             <p>{{ project.id }}</p>
-                            <img :src="portfolioFolder + '/' + project.screen_name + '/' + project.screen_name + '-thumb.jpg'" :alt="project.name" class="img-fluid">
+                            <img :src="'/' + portfolioFolder + '/' + project.screen_name + '/' + project.screen_name + '-thumb.jpg'" :alt="project.name" class="img-fluid">
                             <h3><strong>{{ project.name }}</strong></h3>
                             <p class="task">{{ project.task }}</p>
                             <p class="skills">{{ project.skills }}</p>
@@ -61,15 +62,16 @@ const Project = {
     `<div id="portfolio-project">
         <div class="container">
 
-        <div class="project-pagination">
-            <router-link to="'"></router-link>
-            <router-link to="'"></router-link>
-        </div><!-- project-pagination -->
-
-
             <div v-if="filterProject && filterProject.length">
 
                 <div v-for="project in filterProject">
+
+
+                <div class="project-pagination">
+                    <router-link :to="'/project/' + project.slug">Next</router-link>
+                    <router-link :to="'/project/' + project.slug">Previous</router-link>
+                </div><!-- project-pagination -->
+
 
                     <div class="project-detail">
                         <h3 class="name">{{ project.id + ' ' + project.name }}</h3>
@@ -81,7 +83,7 @@ const Project = {
 
                     <div class="project-screens">
                         <div v-for="screen in project.screen_total">
-                            <img :src="portfolioFolder + '/' + project.screen_name + '/' + project.screen_name + '-' + screen + '.jpg'" :alt="project.name" class="img-fluid">
+                            <img :src="'/' + portfolioFolder + '/' + project.screen_name + '/' + project.screen_name + '-' + screen + '.jpg'" :alt="project.name" class="img-fluid">
                         </div>
                     </div><!--.project-screens-->
 
@@ -98,6 +100,7 @@ const Project = {
 }
 
 const router = new VueRouter ({
+    mode: 'history',
     routes: [{
             path: '/',
             name: 'home',
