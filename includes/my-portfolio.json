@@ -8,8 +8,8 @@
             "skills": "Wordpress, HTML, CSS, jQuery",
             "link": "",
             "slug": "meltz-effect-5",
-            "ss_name": "mz5",
-            "ss_total": 3
+            "screen_name": "mz5",
+            "screen_total": 3
         },
         {
             "id": 2,
@@ -19,8 +19,8 @@
             "skills": "Wordpress, HTML, CSS, jQuery",
             "link": "http://meltzeffect.atwebpages.com/",
             "slug": "meltz-effect-6",
-            "ss_name": "mz6",
-            "ss_total": 3
+            "screen_name": "mz6",
+            "screen_total": 3
         },
         {
             "id": 3,
@@ -30,8 +30,8 @@
             "skills": "Wordpress, HTML, CSS, jQuery",
             "link": "http://meltzeffect.atwebpages.com/",
             "slug": "meltz-effect-6",
-            "ss_name": "mz6",
-            "ss_total": 3
+            "screen_name": "mz6",
+            "screen_total": 3
         },
         {
             "id": 4,
@@ -41,8 +41,8 @@
             "skills": "HTML, CSS, jQuery",
             "link": "",
             "slug": "baden-restaurant-and-pub",
-            "ss_name": "baden",
-            "ss_total": 4
+            "screen_name": "baden",
+            "screen_total": 4
         },
         {
             "id": 5,
@@ -52,8 +52,8 @@
             "skills": "Wordpress, HTML, CSS, jQuery",
             "link": "",
             "slug": "tempo",
-            "ss_name": "tempo",
-            "ss_total": 4
+            "screen_name": "tempo",
+            "screen_total": 4
         },
         {
             "id": 6,
@@ -63,8 +63,8 @@
             "skills": "PHP, HTML, CSS, jQuery",
             "link": "",
             "slug": "yuu-talents",
-            "ss_name": "yuu",
-            "ss_total": 5
+            "screen_name": "yuu",
+            "screen_total": 5
         },
         {
             "id": 7,
@@ -74,8 +74,8 @@
             "skills": "Wordpress, HTML, CSS, jQuery",
             "link": "",
             "slug": "annix-leisure",
-            "ss_name": "annix",
-            "ss_total": 5
+            "screen_name": "annix",
+            "screen_total": 5
         },
         {
             "id": 8,
@@ -85,8 +85,8 @@
             "skills": "Wordpress, HTML, CSS, jQuery",
             "link": "",
             "slug": "gic-school",
-            "ss_name": "gic",
-            "ss_total": 6
+            "screen_name": "gic",
+            "screen_total": 6
         },
         {
             "id": 9,
@@ -96,8 +96,8 @@
             "skills": "Wordpress, HTML, CSS, jQuery",
             "link": "",
             "slug": "jatro-biofuels",
-            "ss_name": "jatro",
-            "ss_total": 5
+            "screen_name": "jatro",
+            "screen_total": 5
         },
         {
             "id": 10,
@@ -107,8 +107,8 @@
             "skills": "PHP, HTML, CSS, jQuery",
             "link": "",
             "slug": "perfectlight",
-            "ss_name": "sonypl",
-            "ss_total": 8
+            "screen_name": "sonypl",
+            "screen_total": 8
         },
         {
             "id": 11,
@@ -118,8 +118,8 @@
             "skills": "Photoshop",
             "link": "",
             "slug": "various-tender-mocks",
-            "ss_name": "tender",
-            "ss_total": 4
+            "screen_name": "tender",
+            "screen_total": 4
         },
         {
             "id": 12,
@@ -129,8 +129,8 @@
             "skills": "HTML, CSS",
             "link": "",
             "slug": "various-edm",
-            "ss_name": "edm",
-            "ss_total": 10
+            "screen_name": "edm",
+            "screen_total": 10
         },
         {
             "id": 13,
@@ -140,8 +140,8 @@
             "skills": "HTML, CSS, jQuery",
             "link": "",
             "slug": "eventclique",
-            "ss_name": "ec1",
-            "ss_total": 6
+            "screen_name": "ec1",
+            "screen_total": 6
         },
         {
             "id": 14,
@@ -151,8 +151,8 @@
             "skills": "HTML, CSS, jQuery",
             "link": "",
             "slug": "eventclique-revamp",
-            "ss_name": "ec2",
-            "ss_total": 8
+            "screen_name": "ec2",
+            "screen_total": 8
         },
         {
             "id": 15,
@@ -162,8 +162,8 @@
             "skills": "HTML, CSS, jQuery",
             "link": "",
             "slug": "zyxel-singapore",
-            "ss_name": "ec1",
-            "ss_total": 4
+            "screen_name": "ec1",
+            "screen_total": 4
         },
         {
             "id": 16,
@@ -173,8 +173,8 @@
             "skills": "HTML, CSS, jQuery",
             "link": "",
             "slug": "halfprice-sg",
-            "ss_name": "hpsg",
-            "ss_total": 6
+            "screen_name": "hpsg",
+            "screen_total": 6
         },
         {
             "id": 17,
@@ -184,8 +184,8 @@
             "skills": "PHP, HTML, CSS, jQuery",
             "link": "",
             "slug": "the-couples-retreat",
-            "ss_name": "cr",
-            "ss_total": 3
+            "screen_name": "cr",
+            "screen_total": 3
         },
         {
             "id": 18,
@@ -195,8 +195,8 @@
             "skills": "PHP, HTML, CSS, jQuery",
             "link": "",
             "slug": "nyp-dpe",
-            "ss_name": "nypdpe",
-            "ss_total": 4
+            "screen_name": "nypdpe",
+            "screen_total": 4
         },
         {
             "id": 19,
@@ -206,8 +206,8 @@
             "skills": "PHP, HTML, CSS, jQuery",
             "link": "",
             "slug": "nature-journeys-with-zeb-hogan",
-            "ss_name": "zbh",
-            "ss_total": 4
+            "screen_name": "zbh",
+            "screen_total": 4
         },
         {
             "id": 20,
@@ -217,8 +217,8 @@
             "skills": "PHP, HTML, CSS, jQuery",
             "link": "",
             "slug": "tum-asia-open-house",
-            "ss_name": "tumoh",
-            "ss_total": 5
+            "screen_name": "tumoh",
+            "screen_total": 5
         },
         {
             "id": 21,
@@ -228,8 +228,8 @@
             "skills": "PHP, HTML, CSS, jQuery",
             "link": "",
             "slug": "tum-asia-student-life",
-            "ss_name": "tumsp",
-            "ss_total": 5
+            "screen_name": "tumsp",
+            "screen_total": 5
         },
         {
             "id": 22,
@@ -239,8 +239,8 @@
             "skills": "PHP, HTML, CSS, jQuery",
             "link": "",
             "slug": "supermodelme-femme-fatale",
-            "ss_name": "smmff",
-            "ss_total": 5
+            "screen_name": "smmff",
+            "screen_total": 5
         },
         {
             "id": 23,
@@ -250,8 +250,8 @@
             "skills": "PHP, HTML, CSS, jQuery",
             "link": "",
             "slug": "hot-guys-who-cook",
-            "ss_name": "hgwc",
-            "ss_total": 6
+            "screen_name": "hgwc",
+            "screen_total": 6
         },
         {
             "id": 24,
@@ -261,8 +261,8 @@
             "skills": "PHP, HTML, CSS, jQuery, Youtube API",
             "link": "",
             "slug": "smash",
-            "ss_name": "smash",
-            "ss_total": 5
+            "screen_name": "smash",
+            "screen_total": 5
         },
         {
             "id": 25,
@@ -272,8 +272,8 @@
             "skills": "PHP, HTML, CSS, jQuery, Facebook API",
             "link": "",
             "slug": "king-and-king-wong-like-contest",
-            "ss_name": "kkwlike",
-            "ss_total": 4
+            "screen_name": "kkwlike",
+            "screen_total": 4
         },
         {
             "id": 26,
@@ -283,8 +283,8 @@
             "skills": "PHP, HTML, CSS, jQuery, Facebook API",
             "link": "",
             "slug": "free-pet-shop",
-            "ss_name": "fpspet",
-            "ss_total": 3
+            "screen_name": "fpspet",
+            "screen_total": 3
         },
         {
             "id": 27,
@@ -294,8 +294,8 @@
             "skills": "PHP, HTML, CSS, jQuery, Facebook API",
             "link": "",
             "slug": "your-nikon-moments-photo-contest",
-            "ss_name": "fpsnikon",
-            "ss_total": 5
+            "screen_name": "fpsnikon",
+            "screen_total": 5
         },
         {
             "id": 28,
@@ -305,8 +305,8 @@
             "skills": "PHP, HTML, CSS, jQuery, Instagram API",
             "link": "",
             "slug": "our-family-bonding-moment-scrapbook",
-            "ss_name": "ofbms",
-            "ss_total": 6
+            "screen_name": "ofbms",
+            "screen_total": 6
         },
         {
             "id": 29,
@@ -316,8 +316,8 @@
             "skills": "HTML, CSS, jQuery",
             "link": "",
             "slug": "transformations-by-joe",
-            "ss_name": "tbj",
-            "ss_total": 5
+            "screen_name": "tbj",
+            "screen_total": 5
         },
         {
             "id": 30,
@@ -327,8 +327,8 @@
             "skills": "Wordpress, HTML, CSS, jQuery",
             "link": "",
             "slug": "keraton-jimbaran-resort-and-spa",
-            "ss_name": "kjresort",
-            "ss_total": 5
+            "screen_name": "kjresort",
+            "screen_total": 5
         },
         {
             "id": 31,
@@ -338,8 +338,8 @@
             "skills": "Wordpress, HTML, CSS, jQuery",
             "link": "",
             "slug": "bintan-resort-ferries",
-            "ss_name": "brf",
-            "ss_total": 5
+            "screen_name": "brf",
+            "screen_total": 5
         },
         {
             "id": 32,
@@ -349,8 +349,8 @@
             "skills": "Wordpress, HTML, CSS, jQuery",
             "link": "",
             "slug": "king-and-king-wong",
-            "ss_name": "kkw",
-            "ss_total": 4
+            "screen_name": "kkw",
+            "screen_total": 4
         },
         {
             "id": 33,
@@ -360,8 +360,8 @@
             "skills": "Wordpress, HTML, CSS, jQuery",
             "link": "",
             "slug": "keep-singapore-beautiful-movement",
-            "ss_name": "ksbm",
-            "ss_total": 4
+            "screen_name": "ksbm",
+            "screen_total": 4
         },
         {
             "id": 34,
@@ -371,8 +371,8 @@
             "skills": "Wordpress, HTML, CSS, jQuery",
             "link": "",
             "slug": "pa-nc",
-            "ss_name": "panc1",
-            "ss_total": 5
+            "screen_name": "panc1",
+            "screen_total": 5
         },
         {
             "id": 35,
@@ -382,8 +382,8 @@
             "skills": "Wordpress, HTML, CSS, jQuery",
             "link": "",
             "slug": "pa-nc-revamp",
-            "ss_name": "panc2",
-            "ss_total": 8
+            "screen_name": "panc2",
+            "screen_total": 8
         },
         {
             "id": 36,
@@ -393,8 +393,8 @@
             "skills": "Wordpress, HTML, CSS, jQuery",
             "link": "",
             "slug": "the-bakers-story",
-            "ss_name": "bks",
-            "ss_total": 4
+            "screen_name": "bks",
+            "screen_total": 4
         },
         {
             "id": 37,
@@ -404,8 +404,8 @@
             "skills": "Wordpress multisite, HTML, CSS, jQuery",
             "link": "",
             "slug": "sutd-istd",
-            "ss_name": "sutdistd",
-            "ss_total": 4
+            "screen_name": "sutdistd",
+            "screen_total": 4
         },
         {
             "id": 38,
@@ -415,8 +415,8 @@
             "skills": "Wordpress multisite, HTML, CSS, jQuery",
             "link": "",
             "slug": "sutd-epd",
-            "ss_name": "sutdepd",
-            "ss_total": 4
+            "screen_name": "sutdepd",
+            "screen_total": 4
         },
         {
             "id": 39,
@@ -426,8 +426,8 @@
             "skills": "Wordpress, HTML, CSS, jQuery",
             "link": "",
             "slug": "my-green-space",
-            "ss_name": "mgs",
-            "ss_total": 3
+            "screen_name": "mgs",
+            "screen_total": 3
         },
         {
             "id": 40,
@@ -437,8 +437,8 @@
             "skills": "Wordpress, HTML, CSS, jQuery",
             "link": "",
             "slug": "tum-asia",
-            "ss_name": "tum",
-            "ss_total": 5
+            "screen_name": "tum",
+            "screen_total": 5
         },
         {
             "id": 41,
@@ -448,8 +448,8 @@
             "skills": "CodeIgniter 2.0.3, HTML, CSS, jQuery",
             "link": "",
             "slug": "ethos",
-            "ss_name": "ethos",
-            "ss_total": 5
+            "screen_name": "ethos",
+            "screen_total": 5
         },
         {
             "id": 42,
@@ -459,8 +459,8 @@
             "skills": "CodeIgniter 2.0.3, HTML, CSS, jQuery",
             "link": "",
             "slug": "e3s",
-            "ss_name": "e3s",
-            "ss_total": 7
+            "screen_name": "e3s",
+            "screen_total": 7
         },
         {
             "id": 43,
@@ -470,8 +470,8 @@
             "skills": "Laravel 4.1, HTML, CSS, jQuery",
             "link": "",
             "slug": "building-people-2014",
-            "ss_name": "bppc",
-            "ss_total": 4
+            "screen_name": "bppc",
+            "screen_total": 4
         },
         {
             "id": 44,
@@ -479,10 +479,10 @@
             "desc": "<p>For kids 7-10 year old to join, participant needs to register and submit an answer for a short Q&A. Selected kids need to sign-up for a desired workshop, once the time slot reach the cap limit, it will auto closed. User can manage personnel particulars and download worksheets from the dashboard.</p><p>Admin can manage the submissions and signups using the admin panel. Weekly reminder email sent to remind user to sign-up for workshop if they have not and to attend the approved workshop.</p>",
             "task": "Development and partial design",
             "skills": "Laravel 4.0, HTML, CSS, jQuery, Simple css animation",
-            "link": "",
+            "link": "https://www.google.com",
             "slug": "ngc-young-explorer-programme",
-            "ss_name": "yep",
-            "ss_total": 5
+            "screen_name": "yep",
+            "screen_total": 5
         },
         {
             "id": 45,
@@ -492,8 +492,8 @@
             "skills": "Wordpress, HTML, CSS, jQuery",
             "link": "",
             "slug": "sunseap",
-            "ss_name": "sunseap",
-            "ss_total": 5
+            "screen_name": "sunseap",
+            "screen_total": 5
         },
         {
             "id": 46,
@@ -503,8 +503,8 @@
             "skills": "Laravel 4.2, HTML, CSS, jQuery",
             "link": "",
             "slug": "e2i-employer",
-            "ss_name": "e2iemployer",
-            "ss_total": 5
+            "screen_name": "e2iemployer",
+            "screen_total": 5
         },
         {
             "id": 47,
@@ -514,8 +514,8 @@
             "skills": "Laravel 4.2, HTML, CSS, jQuery, Ajax, Boostrap 3",
             "link": "",
             "slug": "e2i-fbam",
-            "ss_name": "e2ifbam",
-            "ss_total": 12
+            "screen_name": "e2ifbam",
+            "screen_total": 12
         },
         {
             "id": 48,
@@ -525,8 +525,8 @@
             "skills": "Laravel 4.2, HTML, CSS, jQuery, Bootstrap 3",
             "link": "",
             "slug": "the-apj-alliance-partner-conference-2015",
-            "ss_name": "hpapj",
-            "ss_total": 6
+            "screen_name": "hpapj",
+            "screen_total": 6
         }
     ]
 }
