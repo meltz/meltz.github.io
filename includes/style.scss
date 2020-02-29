@@ -1,0 +1,277 @@
+/* Functions */
+$body-font: 'Open Sans', arial, sans-serif;
+
+@function color($color)
+{
+    @return map-get($colors, $color);
+}
+
+$colors: (
+    white: #fff,
+    concrete: #f2f2f2,
+    mercury: #e1e1e1,
+    alto: #d9d9d9,
+    gray: #808080,
+    tundora: #444,
+    mine-shaft: #222
+);
+
+html
+{
+    font-size: 10px;
+}
+
+body
+{
+    background-color: color(alto);
+    font-family: $body-font;
+    color: color(gray);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5
+{
+    margin: 0;
+    font-weight: 400;
+}
+
+p
+{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+a
+{
+    color: color(gray);
+    text-decoration: none;
+
+    &:focus, &:hover
+    {
+        color: color(gray);
+        text-decoration: none;
+    }
+}
+
+#scroll-up
+{
+    background-image: url('../images/scroll-up-btn.png');
+    bottom: 20px;
+    height: 19px;
+    right: 40px;
+    width: 34px;
+}
+
+/* #top-nav-section */
+#top-nav-section
+{
+    background: color(white);
+	padding: 1rem 0;
+	border-bottom: 1px solid color(mercury);
+}
+
+/* #portfolio-section */
+#portfolio-section
+{
+    margin-top: 3rem;
+
+    .project
+    {
+        display: block;
+        background: color(white);
+        margin-bottom: 1.3rem;
+        color: color(gray);
+
+        .thumbnail
+        {
+            transition-duration: 0.3s;
+            transition-property: color, background-color, opacity;
+        }
+
+        .portfolio-content
+        {
+            padding: 1rem 2rem
+        }
+
+        h3
+        {
+            margin-bottom: 0.5rem;
+            color: color(mine-shaft);
+        	font-size: 1.8rem;
+        }
+
+        p
+        {
+        	margin-bottom: 0;
+            font-size: 1.4rem;
+            line-height: 1.5;
+        }
+
+        &:hover
+        {
+            background: color(concrete);
+        	text-decoration: none;
+
+            .thumbnail
+            {
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+/* #project-section */
+#project-section
+{
+    .project-detail-section
+    {
+        background: color(concrete);
+        border-bottom: 1px solid color(mercury);
+    }
+
+    .project-detail
+    {
+        padding: 5rem 0;
+
+        h3
+        {
+        	margin-bottom: 1.5rem;
+            color: color(mine-shaft);
+        	font-size: 1.8rem;
+        }
+
+        p
+        {
+            font-size: 1.4rem;
+            line-height: 1.5;
+        }
+
+        .task
+        {
+            margin-bottom: 0.5rem;
+            color: color(tundora);
+            font-size: 1.4rem;
+        }
+
+        .skills
+        {
+            margin-bottom: 0;
+            color: color(tundora);
+            font-size: 1.4rem;
+        }
+
+        .link
+        {
+        	display: inline-block;
+            background-color: color(tundora);
+        	padding: 0.5rem 1rem;
+        	margin-top: 2rem;
+        	color: color(white);
+            font-size: 1.4rem;
+
+            &:hover
+            {
+            	background-color: color(alto);
+            }
+        }
+    }
+
+    .project-screens-section
+    {
+        margin-top: 3rem;
+
+        .screenshot
+        {
+            margin-bottom: 1.5rem;
+            text-align: center;
+
+            &:last-child
+            {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+/* #footer-section */
+#footer-section
+{
+    padding: 2rem 0 1rem;
+
+    p
+    {
+        margin-bottom: 0;
+        font-size: 1.2rem;
+    }
+}
+
+/* Media Queries */
+/* Office Bigger Screen */
+@media (max-width: 1600px)
+{
+}
+
+/* Office Laptop */
+@media (max-width: 1366px)
+{
+}
+
+@media (max-width: 1280px)
+{
+}
+
+@media (max-width: 1199px)
+{
+    html
+    {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 1024px)
+{
+}
+
+@media (max-width: 991px)
+{
+}
+
+@media (max-width: 960px)
+{
+}
+
+@media (max-width: 768px)
+{
+}
+
+@media (max-width: 767px)
+{
+}
+
+@media (max-width: 640px)
+{
+}
+
+@media (max-width: 480px)
+{
+    html
+    {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 414px)
+{
+}
+
+@media (max-width: 375px)
+{
+}
+
+@media (max-width: 360px)
+{
+}
+
+@media (max-width: 320px)
+{
+}

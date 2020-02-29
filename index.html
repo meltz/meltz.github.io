@@ -7,20 +7,25 @@
     <meta name="theme-color" content="#004a8b">
     <title>meltz | portfolio of shitian</title>
     <link href="favicon.ico" rel="shortcut icon">
-    <link href="includes/bootstrap.min.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="includes/styles.min.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet">
+    <link href="includes/bootstrap.min.css" rel="stylesheet" >
+    <link href="includes/style.min.css" rel="stylesheet" >
 </head>
 <body>
     <div id="app">
-
-        <nav class="sticky-top">
+        <nav id="top-nav-section" class="sticky-top">
             <div class="container-fluid">
                 <router-link to="/"><img src="../images/main-logo.png" alt=""></router-link>
             </div>
-        </nav>
+        </nav><!-- #top-nav-section -->
 
         <router-view></router-view>
 
+        <footer id="footer-section">
+            <div class="container-fluid">
+                <p>&copy;{{ this.getYear() }} meltz. all rights reserved</p>
+            </div>
+        </footer><!-- #footer-seciton -->
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -32,9 +37,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.1.3/vue-router.min.js"></script>
     <script src="includes/scripts.js"></script>
-
-
-
-
 </body>
 </html>

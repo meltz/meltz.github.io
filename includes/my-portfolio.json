@@ -398,17 +398,6 @@
         },
         {
             "id": 37,
-            "name": "SUTD - ISTD",
-            "desc": "",
-            "task": "Development and partial design",
-            "skills": "Wordpress multisite, HTML, CSS, jQuery",
-            "link": "",
-            "slug": "sutd-istd",
-            "screen_name": "sutdistd",
-            "screen_total": 4
-        },
-        {
-            "id": 38,
             "name": "SUTD - EPD",
             "desc": "",
             "task": "Development and partial design",
@@ -416,6 +405,17 @@
             "link": "",
             "slug": "sutd-epd",
             "screen_name": "sutdepd",
+            "screen_total": 4
+        },
+        {
+            "id": 38,
+            "name": "SUTD - ISTD",
+            "desc": "",
+            "task": "Development and partial design",
+            "skills": "Wordpress multisite, HTML, CSS, jQuery",
+            "link": "",
+            "slug": "sutd-istd",
+            "screen_name": "sutdistd",
             "screen_total": 4
         },
         {
@@ -523,7 +523,7 @@
             "desc": "",
             "task": "Front and backend development",
             "skills": "Laravel 4.2, HTML, CSS, jQuery, Bootstrap 3",
-            "link": "",
+            "link": "http://hp-alliancepartner.com/",
             "slug": "the-apj-alliance-partner-conference-2015",
             "screen_name": "hpapj",
             "screen_total": 6

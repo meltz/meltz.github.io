@@ -1,0 +1,328 @@
+/*
+Theme Name: meltzeffect
+Author: meltz
+Description: Responsive Theme
+Version: 6
+License: meltz
+*/
+
+/* meyerweb CSS Reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box; /*important to reset */
+}
+
+body { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after
+{
+	content: '';
+	content: none;
+}
+
+table
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+img
+{
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+a, a:focus
+{
+	outline: none;
+	text-decoration: none;
+}
+
+a:hover, a:active
+{
+	text-decoration: none;
+}
+
+.layout-width
+{
+	max-width: 1170px;
+}
+
+.header-gap
+{
+	padding-top: 75px;
+}
+
+#scroll-up
+{
+	background-image: url("images/layout/scroll-up-btn.png");
+	bottom: 20px;
+	right: 100px;
+	width: 34px;
+	height: 19px;
+}
+
+/*--- General ---*/
+html
+{
+	font-size: 1px; /* Reset for rem */
+}
+
+body
+{
+	font: 13rem 'Open Sans', arial, helvetica, sans-serif;
+	background: #d9d9d9;
+	color: #808080;
+}
+
+/*---#header-wrap---*/
+#header-wrap
+{
+	overflow: hidden;
+	position: fixed;
+	padding: 10rem 0;
+	background: #fff;
+	width: 100%;
+	border-bottom: 1px solid #e1e1e1;
+	z-index: 500;
+}
+
+#header-wrap #header
+{
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+#header #logo
+{
+	float: left;
+	width: 146rem;
+	height: 27rem;
+
+}
+
+#header #linkedin-icon
+{
+	float: right;
+	width: 27rem;
+	height: 27rem;
+}
+
+/*---#contentWrap---*/
+#content-wrap
+{
+	overflow: hidden;
+	margin: 0 auto;
+	font-size: 13rem;
+}
+
+#content-wrap .content
+{
+	float: left;
+	margin: 0 0 10px;
+	padding: 0 0 10px;
+	background: #fff;
+	max-width: 576px;
+	color: #808080;
+}
+
+#content-wrap .content:nth-child(even)
+{
+	float: right;
+}
+
+#content-wrap .content:hover
+{
+	background: #f2f2f2;
+	text-decoration: none;
+}
+
+.content img
+{
+	transition-duration: 0.3s;
+	transition-property: color, background-color, opacity;
+}
+
+.content:hover img
+{
+	opacity: 0.5;
+}
+
+.content h3
+{
+	margin: 10px 0 5px 20px;
+	font-size: 18rem;
+	color: #222;
+}
+
+.content p
+{
+	display: block;
+	margin: 0 0 0 20px;
+	line-height: 18px;
+}
+
+/*---#desc-wrap---*/
+#desc-wrap
+{
+	overflow: hidden;
+	background: #f2f2f2;
+	width: 100%;
+	border-bottom: 1px solid #e1e1e1;
+}
+
+#desc-wrap #desc
+{
+	overflow: hidden;
+	padding: 30px 0 50px;
+	margin: 0 auto;
+	max-width: 750px;
+	font-size: 13rem;
+}
+
+#desc h3
+{
+	margin: 0 0 15px;
+	font-size: 18rem;
+	letter-spacing: 2px;
+	color: #222;
+}
+
+#desc p
+{
+	margin: 0 0 10px;
+	line-height: 18px;
+}
+
+#desc .scope, #desc .skill
+{
+	color: #444;
+}
+
+#desc a
+{
+	display: inline-block;
+	padding: 5px 10px;
+	margin: 10px 0 0;
+	background: #d9d9d9;
+	color: #fff;
+}
+
+#desc a:hover
+{
+	background: #3498db;
+}
+
+/*---#inner-wrap---*/
+#inner-wrap
+{
+	overflow: hidden;
+	padding: 30px 0 0;
+	margin: 0 auto 10px;
+}
+
+#inner-wrap img
+{
+	margin: 0 auto 10px;
+}
+
+/*---#nav-wrap---*/
+#nav-wrap
+{
+	overflow: hidden;
+	margin: 0 auto 10px;
+	max-width: 300rem;
+}
+
+	#nav-wrap .nav-btn a
+	{
+		display: block;
+		width: 25rem;
+		height: 35rem;
+		text-indent: -9999px;
+		overflow: hidden;
+	}
+
+	#nav-wrap #prev-btn a
+	{
+		float: left;
+		background: url('images/layout/prev-btn.png') no-repeat;
+	}
+
+	#nav-wrap #next-btn a
+	{
+		float: right;
+		background: url('images/layout/next-btn.png') no-repeat;
+	}
+
+/*---#footer-wrap---*/
+#footer-wrap
+{
+	overflow: hidden;
+	padding: 20px 0 0;
+	margin: 0 auto 10px;
+	font-size: 12rem;
+}
+
+#footer-wrap p
+{
+	float: left;
+}
+
+/* Media queries */
+/* Smaller than 1160px, smaller desktop and tablet landscape */
+@media screen and (max-width: 1160px)
+{
+	html
+	{
+		font-size: 0.9px !important;
+	}
+
+	.layout-width
+	{
+		width: 95%;
+	}
+
+	#content-wrap .content
+	{
+		width: 49.6%;
+	}
+}
+
+/* Smaller than 768px, tablet potrait */
+@media screen and (max-width: 768px)
+{
+	.header-gap
+	{
+		padding-top: 60px;
+	}
+
+	#content-wrap .content
+	{
+		overflow: hidden;
+		display: block;
+		float: none !important;
+		margin: 0 auto 10px;
+		width: auto;
+	}
+
+	#desc-wrap #desc
+	{
+		padding: 0 0 15px;
+		width: 95%;
+	}
+}
+
+/* for 480px or less, mobile */
+@media screen and (max-width: 480px){}
