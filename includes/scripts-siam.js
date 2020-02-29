@@ -22,45 +22,37 @@ Vue.mixin ({
 })
 
 Vue.component('pagination', {
-    props: ['project'],
+    props: ['selectedProject'],
     data() {
         return {
-            previousID: 0,
-            previousSlug: '',
-            nextID: 0,
-            nextSlug: ''
+            selected: this.selectedProject.id,
+            previous: this.selected + 1,
+            next: this.selected - 1
+        }
+    },
+    methods: {
+        getPreviousProject() {
+            return this.myPortfolio.filter(project => project.id === previous)
+        },
+        getNextProject() {
+            return this.myPortfolio.filter(project => project.id === next)
         }
     },
     computed: {
-        getPreviousID() {
-            return this.previousID = this.project + 1
-        },
-        getPreviousSlug() {
-            return this.previousSlug = this.myPortfolio.filter(project => project.id === this.previousID).map(filteredObj => filteredObj.slug)
-        },
-        getNextID() {
-            return this.nextID = this.project - 1
-        },
-        getNextSlug() {
-            return this.nextSlug = this.myPortfolio.filter(project => project.id === this.nextID).map(filteredObj => filteredObj.slug)
-        },
         getTotalProject() {
             return this.myPortfolio.length
         },
     },
     template:
     `<div class="project-pagination">
-
         <div class="previous-btn">
-            <span v-if="this.getPreviousID <= this.getTotalProject"><router-link :to="'/project/' + this.getPreviousSlug">Previous</router-link></span>
+            <span v-if="this.previous <= 1"><router-link :to="'/project/' + getPreviousProject.slug">Previous</router-link></span>
             <span v-else>No Previous</span>
         </div>
         <div class="next-btn">
-            <span v-if="this.getNextID >= 1"><router-link :to="'/project/' + this.getNextSlug">Next</router-link></span>
+            <span v-if="this.next >= this.getTotalProject"><router-link :to="'/project/' + getNextProject.slug">Next</router-link></span>
             <span v-else>No Next</span>
         </div>
-
-
     </div><!-- project-pagination -->`
 })
 
@@ -98,10 +90,16 @@ const Project = {
     },
     template:
     `<div id="portfolio-project">
+
         <div class="container">
+
             <div v-if="filterProject && filterProject.length">
+
                 <div v-for="project in filterProject">
-                    <pagination :project="project.id"></pagination>
+
+
+                    <pagination selectedProject="project"></pagination>
+
                     <div class="project-detail">
                         <h3 class="name">{{ project.id + ' ' + project.name }}</h3>
                         <div v-if="project.desc" class="desc" v-html="project.desc"></div>
@@ -109,13 +107,16 @@ const Project = {
                         <p class="skills">{{ project.skills }}</p>
                         <a v-if="project.link" :href="project.link" target="_blank" class="link"><span class="link-text">Visit: {{ project.name }}</span></a>
                     </div><!--.project-detail-->
+
                     <div class="project-screens">
                         <div v-for="screen in project.screen_total">
                             <img :src="'/' + portfolioFolder + '/' + project.screen_name + '/' + project.screen_name + '-' + screen + '.jpg'" :alt="project.name" class="img-fluid">
                         </div>
                     </div><!--.project-screens-->
-                    <pagination :project="project.id"></pagination>
+
+
                 </div>
+
             </div>
             <div v-else>
                 <p>404 Page not found</p>
