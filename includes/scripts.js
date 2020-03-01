@@ -21,8 +21,8 @@ Vue.mixin ({
     }
 })
 
-Vue.component('pagination', {
-    props: ['project'],
+Vue.component('topnav', {
+    props: ['display','project'],
     data() {
         return {
             previousID: 0,
@@ -49,25 +49,27 @@ Vue.component('pagination', {
         },
     },
     template:
-    `<div class="project-pagination">
-        <div class="container">
+    `<nav id="top-nav-section" class="sticky-top">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-12">
-
-                    <div class="previous-btn">
-                        <span v-if="this.getPreviousID >= 1"><router-link :to="'/project/' + this.getPreviousSlug">Previous</router-link></span>
-                        <span v-else>No Previous</span>
-                    </div>
-                    <div class="next-btn">
-                        <span v-if="this.getNextID <= this.getTotalProject"><router-link :to="'/project/' + this.getNextSlug">Next</router-link></span>
-                        <span v-else>No Next</span>
-                    </div>
-
+                <div class="col-6">
+                    <router-link to="/" class="main-logo"><img src="../images/main-logo.png" alt=""></router-link>
+                </div>
+                <div class="col-6">
+                    <div v-if="this.display" class="pagination justify-content-end">
+                        <div class="previous-btn">
+                            <span v-if="this.getPreviousID >= 1"><router-link :to="'/project/' + this.getPreviousSlug"><img src="images/previous-btn.png" alt=""></router-link></span>
+                            <span v-else><a href="#" class="disabled-link"><img src="images/previous-btn.png" alt=""></a></span>
+                        </div>
+                        <div class="next-btn">
+                            <span v-if="this.getNextID <= this.getTotalProject"><router-link :to="'/project/' + this.getNextSlug"><img src="images/next-btn.png" alt=""></router-link></span>
+                            <span v-else><a href="#" class="disabled-link"><img src="images/next-btn.png" alt=""></a></span>
+                        </div>
+                    </div><!-- pagination -->
                 </div>
             </div>
         </div>
-
-    </div><!-- project-pagination -->`
+    </nav><!-- #top-nav-section -->`
 })
 
 const Home = {
@@ -77,22 +79,25 @@ const Home = {
         }
     },
     template:
-    `<div id="portfolio-section">
-        <div class="container-fluid">
-            <div class="row justify-content-center">
-                <div v-for="project in latestProjects" :key="project.id" class="col-12 col-md-auto">
-                    <router-link :to="'/project/' + project.slug" :id="'p-' + project.id" class="project">
-                        <img :src="'/' + portfolioFolder + '/' + project.screen_name + '/' + project.screen_name + '-thumb.jpg'" :alt="project.name" class="img-fluid thumbnail">
-                        <div class="portfolio-content">
-                            <h3>{{ project.name }}</h3>
-                            <p class="task">{{ project.task }}</p>
-                            <p class="skills">{{ project.skills }}</p>
-                        </div>
-                    </router-link>
+    `<div id="main-section">
+        <topnav :display="false"></topnav>
+        <div id="portfolio-section">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div v-for="project in latestProjects" :key="project.id" class="col-sm-auto col-md-auto col-lg-auto">
+                        <router-link :to="'/project/' + project.slug" :id="'p-' + project.id" class="project">
+                            <img :src="'/' + portfolioFolder + '/' + project.screen_name + '/' + project.screen_name + '-thumb.jpg'" :alt="project.name" class="img-fluid thumbnail">
+                            <div class="portfolio-content">
+                                <h3>{{ project.name }}</h3>
+                                <p class="task">{{ project.task }}</p>
+                                <p class="skills">{{ project.skills }}</p>
+                            </div>
+                        </router-link>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div><!-- #portfolio-section -->`,
+        </div><!-- #portfolio-section -->
+    </div><!-- #main-section -->`
 }
 
 const Project = {
@@ -102,49 +107,42 @@ const Project = {
         },
     },
     template:
-    `<div id="project-section">
+    `<div id="main-section">
         <div v-if="filterProject && filterProject.length">
             <div v-for="project in filterProject">
 
-                <pagination :project="project.id"></pagination>
+                <topnav :display="true" :project="project.id"></topnav>
 
-                <div class="project-detail-section">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-8">
-                                <div class="project-detail">
-                                    <h3 class="name">{{ project.name }}</h3>
-                                    <div v-if="project.desc" class="desc" v-html="project.desc"></div>
-                                    <p class="task">{{ project.task }}</p>
-                                    <p class="skills">{{ project.skills }}</p>
-                                    <a v-if="project.link" :href="project.link" target="_blank" class="link"><span class="link-text">Click to view</span></a>
-                                </div><!-- .project-detail -->
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- .project-detail-section -->
-
-                <div class="project-screens-section">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12">
-                                <div v-for="screen in project.screen_total" class="screenshot">
-                                    <img :src="'/' + portfolioFolder + '/' + project.screen_name + '/' + project.screen_name + '-' + screen + '.jpg'" :alt="project.name" class="img-fluid">
+                <div id="project-section">
+                    <div class="project-detail-section">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-12 col-md-8">
+                                    <div class="project-detail">
+                                        <h3 class="name">{{ project.name }}</h3>
+                                        <div v-if="project.desc" class="desc" v-html="project.desc"></div>
+                                        <p class="task">{{ project.task }}</p>
+                                        <p class="skills">{{ project.skills }}</p>
+                                        <a v-if="project.link" :href="project.link" target="_blank" class="link"><span class="link-text">Visit the site</span></a>
+                                    </div><!-- .project-detail -->
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div><!-- .project-screens-section -->
+                    </div><!-- .project-detail-section -->
+                    <div class="project-screens-section">
+                        <div v-for="screen in project.screen_total" class="screenshot">
+                            <img :src="'/' + portfolioFolder + '/' + project.screen_name + '/' + project.screen_name + '-' + screen + '.jpg'" :alt="project.name" class="img-fluid">
+                        </div>
+                    </div><!-- .project-screens-section -->
 
-                <pagination :project="project.id"></pagination>
-
+                </div><!-- #project-section -->
             </div>
         </div>
         <div v-else>
             <p>404 Page not found</p>
             <p><router-link to="/">Back</router-link></p>
         </div>
-    </div><!-- #project-section -->`,
+    </div><!-- #main-section -->`
 }
 
 const router = new VueRouter ({
@@ -175,8 +173,8 @@ const app = new Vue ({
     router,
     methods: {
         getYear() {
-            const date = new Date()
-            return date.getFullYear()
+            var today = new Date();
+            return today.getFullYear();
         }
     }
 }).$mount('#app')

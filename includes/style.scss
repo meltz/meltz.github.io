@@ -53,21 +53,55 @@ a
     }
 }
 
-#scroll-up
-{
-    background-image: url('../images/scroll-up-btn.png');
-    bottom: 20px;
-    height: 19px;
-    right: 40px;
-    width: 34px;
-}
-
 /* #top-nav-section */
 #top-nav-section
 {
     background: color(white);
 	padding: 1rem 0;
 	border-bottom: 1px solid color(mercury);
+
+    .main-logo
+    {
+        display: inline-block;
+    }
+
+    .pagination
+    {
+        a
+        {
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+
+            &.disabled-link
+            {
+                opacity: 0.1;
+                cursor: default;
+            }
+
+        }
+
+        .previous-btn
+        {
+            a
+            {
+                padding: 0 2rem;
+            }
+        }
+
+        .next-btn
+        {
+            a
+            {
+                padding: 0 2rem;
+            }
+        }
+
+        img
+        {
+            max-height: 2.7rem;
+        }
+    }
 }
 
 /* #portfolio-section */
@@ -222,14 +256,19 @@ a
 
 @media (max-width: 1199px)
 {
-    html
-    {
-        font-size: 9px;
-    }
 }
 
 @media (max-width: 1024px)
 {
+    html
+    {
+        font-size: 9px;
+    }
+
+    .pagination
+    {
+        padding-top: 0.2rem;
+    }
 }
 
 @media (max-width: 991px)
@@ -250,13 +289,29 @@ a
 
 @media (max-width: 640px)
 {
+    #project-section
+    {
+        .project-detail
+        {
+            padding: 3rem 0;
+        }
+    }
 }
 
 @media (max-width: 480px)
 {
-    html
+    #top-nav-section
     {
-        font-size: 8px;
+        .pagination
+        {
+            .next-btn
+            {
+                a
+                {
+                    padding-right: 1rem;
+                }
+            }
+        }
     }
 }
 
@@ -270,6 +325,10 @@ a
 
 @media (max-width: 360px)
 {
+    html
+    {
+        font-size: 8px;
+    }
 }
 
 @media (max-width: 320px)

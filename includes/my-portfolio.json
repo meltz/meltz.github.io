@@ -25,12 +25,12 @@
         {
             "id": 3,
             "name": "meltz effect 7",
-            "desc": "",
+            "desc": "<p>Built using Vue.js</p>",
             "task": "Development and design",
-            "skills": "Wordpress, HTML, CSS, jQuery",
-            "link": "http://meltzeffect.atwebpages.com/",
+            "skills": "HTML, CSS, Vue.js",
+            "link": "meltz.github.io/",
             "slug": "meltz-effect-7",
-            "screen_name": "mz7",
+            "screen_name": "mz6",
             "screen_total": 3
         },
         {
@@ -479,7 +479,7 @@
             "desc": "<p>For kids 7-10 year old to join, participant needs to register and submit an answer for a short Q&A. Selected kids need to sign-up for a desired workshop, once the time slot reach the cap limit, it will auto closed. User can manage personnel particulars and download worksheets from the dashboard.</p><p>Admin can manage the submissions and signups using the admin panel. Weekly reminder email sent to remind user to sign-up for workshop if they have not and to attend the approved workshop.</p>",
             "task": "Development and partial design",
             "skills": "Laravel 4.0, HTML, CSS, jQuery, Simple css animation",
-            "link": "https://www.google.com",
+            "link": "",
             "slug": "ngc-young-explorer-programme",
             "screen_name": "yep",
             "screen_total": 5
@@ -523,7 +523,7 @@
             "desc": "",
             "task": "Front and backend development",
             "skills": "Laravel 4.2, HTML, CSS, jQuery, Bootstrap 3",
-            "link": "http://hp-alliancepartner.com/",
+            "link": "",
             "slug": "the-apj-alliance-partner-conference-2015",
             "screen_name": "hpapj",
             "screen_total": 6
