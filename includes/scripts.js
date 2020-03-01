@@ -1,8 +1,8 @@
 Vue.mixin ({
     data() {
         return {
-            jsonFiles: 'http://192.168.86.22:8080/includes/my-portfolio.json',
-            // jsonFiles: 'https://meltz.github.io/includes/my-portfolio.json',
+            //jsonFiles: 'http://192.168.86.22:8080/includes/my-portfolio.json',
+            jsonFiles: 'https://meltz.github.io/includes/my-portfolio.json',
             myPortfolio: [],
             loading: true,
             errored: false,
@@ -110,9 +110,7 @@ const Project = {
     `<div id="main-section">
         <div v-if="filterProject && filterProject.length">
             <div v-for="project in filterProject">
-
                 <topnav :display="true" :project="project.id"></topnav>
-
                 <div id="project-section">
                     <div class="project-detail-section">
                         <div class="container">
@@ -130,11 +128,12 @@ const Project = {
                         </div>
                     </div><!-- .project-detail-section -->
                     <div class="project-screens-section">
-                        <div v-for="screen in project.screen_total" class="screenshot">
-                            <img :src="'/' + portfolioFolder + '/' + project.screen_name + '/' + project.screen_name + '-' + screen + '.jpg'" :alt="project.name" class="img-fluid">
+                        <div class="container">
+                            <div v-for="screen in project.screen_total" class="screenshot">
+                                <img :src="'/' + portfolioFolder + '/' + project.screen_name + '/' + project.screen_name + '-' + screen + '.jpg'" :alt="project.name" class="img-fluid">
+                            </div>
                         </div>
                     </div><!-- .project-screens-section -->
-
                 </div><!-- #project-section -->
             </div>
         </div>
