@@ -58,12 +58,20 @@ Vue.component('topnav', {
                 <div class="col-6">
                     <div v-if="this.display" class="pagination justify-content-end">
                         <div class="previous-btn">
-                            <span v-if="this.getPreviousID >= 1"><router-link :to="'/project/' + this.getPreviousSlug"><img src="images/previous-btn.png" alt=""></router-link></span>
-                            <span v-else><a href="#" class="disabled-link"><img src="images/previous-btn.png" alt=""></a></span>
+                            <div v-if="this.getPreviousID >= 1">
+                                <router-link :to="'/project/' + this.getPreviousSlug" class="link"><img src="images/previous-btn.png" alt=""></router-link>
+                            </div>    
+                            <div v-else>
+                                <span class="link disabled-link"><img src="images/previous-btn.png" alt=""></span>
+                            </div>
                         </div>
                         <div class="next-btn">
-                            <span v-if="this.getNextID <= this.getTotalProject"><router-link :to="'/project/' + this.getNextSlug"><img src="images/next-btn.png" alt=""></router-link></span>
-                            <span v-else><a href="#" class="disabled-link"><img src="images/next-btn.png" alt=""></a></span>
+                            <div v-if="this.getNextID <= this.getTotalProject">
+                                <router-link :to="'/project/' + this.getNextSlug" class="link"><img src="images/next-btn.png" alt=""></router-link>
+                            </div>
+                            <div v-else>
+                                <span class="link disabled-link"><img src="images/next-btn.png" alt=""></span>
+                            </div>
                         </div>
                     </div><!-- pagination -->
                 </div>
