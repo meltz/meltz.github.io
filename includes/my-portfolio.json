@@ -130,7 +130,7 @@
             "link": "",
             "slug": "various-edm",
             "screen_name": "edm",
-            "screen_total": 10
+            "screen_total": 12
         },
         {
             "id": 13,
@@ -526,6 +526,72 @@
             "link": "",
             "slug": "the-apj-alliance-partner-conference-2015",
             "screen_name": "hpapj",
+            "screen_total": 6
+        },
+        {
+            "id": 49,
+            "name": "Betting Behaviour Self-Assessment",
+            "desc": "<p>For customer to determine their betting behaviour</p>",
+            "task": "Front end development",
+            "skills": "HTML, CSS, jQuery",
+            "link": "",
+            "slug": "betting-behaviour-self-assessment",
+            "screen_name": "bettingbsa",
+            "screen_total": 4
+        },
+        {
+            "id": 50,
+            "name": "Asian Handicap Calculator",
+            "desc": "<p>Calculator to calculate Asian Handicap bet type payout</p>",
+            "task": "Front and backend development, design",
+            "skills": "PHP, HTML, CSS, jQuery",
+            "link": "",
+            "slug": "asian-handicap-calculator",
+            "screen_name": "ah",
+            "screen_total": 3
+        },
+        {
+            "id": 51,
+            "name": "Confederations Cup 2017",
+            "desc": "",
+            "task": "Front end development",
+            "skills": "HTML, CSS, jQuery",
+            "link": "http://www.singaporepools.com.sg/ms/confederations2017/en/index.html",
+            "slug": "confederations-cup",
+            "screen_name": "confederations",
+            "screen_total": 3
+        },
+        {
+            "id": 52,
+            "name": "COPA América 2019",
+            "desc": "",
+            "task": "Front end development",
+            "skills": "HTML, CSS, jQuery",
+            "link": "http://www.singaporepools.com.sg/ms/copa2019/en/index.html",
+            "slug": "copa-america",
+            "screen_name": "copa",
+            "screen_total": 3
+        },
+        {
+            "id": 53,
+            "name": "eBetslip",
+            "desc": "",
+            "task": "Front end development",
+            "skills": "HTML, CSS, jQuery",
+            "link": "http://www.singaporepools.com.sg/ms/ebetslip/en/index.html",
+            "slug": "ebetslip",
+            "screen_name": "ebetslip",
+            "screen_total": 6
+        },
+        {
+            "id": 54,
+            "name": "European Leagues 2018-19 Season",
+            "desc": "",
+            "task": "Front end development",
+            "skills": "HTML, CSS, jQuery",
+            "link": "",
+            "slug": "europeanl",
+            "screen_name": "europeanl",
             "screen_total": 6
         }
     ]

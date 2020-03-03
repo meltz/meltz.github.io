@@ -1,8 +1,8 @@
 Vue.mixin ({
     data() {
         return {
-            //jsonFiles: 'http://192.168.86.22:8080/includes/my-portfolio.json',
-            jsonFiles: 'https://meltz.github.io/includes/my-portfolio.json',
+            jsonFiles: 'http://192.168.86.22:8080/includes/my-portfolio.json',
+            //jsonFiles: 'https://meltz.github.io/includes/my-portfolio.json',
             myPortfolio: [],
             loading: true,
             errored: false,
@@ -60,7 +60,7 @@ Vue.component('topnav', {
                         <div class="previous-btn">
                             <div v-if="this.getPreviousID >= 1">
                                 <router-link :to="'/project/' + this.getPreviousSlug" class="link"><img src="images/previous-btn.png" alt=""></router-link>
-                            </div>    
+                            </div>
                             <div v-else>
                                 <span class="link disabled-link"><img src="images/previous-btn.png" alt=""></span>
                             </div>
@@ -136,10 +136,8 @@ const Project = {
                         </div>
                     </div><!-- .project-detail-section -->
                     <div class="project-screens-section">
-                        <div class="container">
-                            <div v-for="screen in project.screen_total" class="screenshot">
-                                <img :src="'/' + portfolioFolder + '/' + project.screen_name + '/' + project.screen_name + '-' + screen + '.jpg'" :alt="project.name" class="img-fluid">
-                            </div>
+                        <div v-for="screen in project.screen_total" class="screenshot">
+                            <img :src="'/' + portfolioFolder + '/' + project.screen_name + '/' + project.screen_name + '-' + screen + '.jpg'" :alt="project.name" class="img-fluid">
                         </div>
                     </div><!-- .project-screens-section -->
                 </div><!-- #project-section -->
