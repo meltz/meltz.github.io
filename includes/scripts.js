@@ -107,13 +107,9 @@ const Home = {
     `<div id="main-section">
         <topnav :display="false"></topnav>
         <div v-if="!this.errored">
-
             <div id="portfolio-section">
                 <div class="container-fluid">
                     <div class="row justify-content-center">
-
-                        <p>{{  'loading: ' + this.loading }}</p>
-
                             <div v-for="project in latestProjects" :key="project.id" class="col-sm-auto col-md-auto col-lg-auto">
                                 <router-link :to="'/project/' + project.slug" :id="'p-' + project.id" class="project">
                                     <img :src="'/' + portfolioFolder + '/' + project.screen_name + '/' + project.screen_name + '-thumb.jpg'" :alt="project.name" class="img-fluid thumbnail">
@@ -128,7 +124,6 @@ const Home = {
                     </div>
                 </div>
             </div><!-- #portfolio-section -->
-
         <div v-else>
             <page-not-found :back-btn="false"></page-not-found>
         </div>
@@ -178,7 +173,8 @@ const Project = {
 }
 
 const router = new VueRouter ({
-    routes: [{
+    routes: [
+        {
             path: '/',
             name: 'home',
             component: Home,
@@ -198,7 +194,10 @@ const router = new VueRouter ({
             name: 'not-found',
             component: Home
         }
-    ]
+    ],
+    scrollBehavior (to, from, savedPosition) {
+        return { x: 0, y: 0 }
+    }
 })
 
 const app = new Vue ({

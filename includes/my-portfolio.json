@@ -28,9 +28,9 @@
             "desc": "<p>Built using Vue.js</p>",
             "task": "Development and design",
             "skills": "HTML, CSS, Vue.js",
-            "link": "meltz.github.io/",
+            "link": "",
             "slug": "meltz-effect-7",
-            "screen_name": "mz6",
+            "screen_name": "mz7",
             "screen_total": 3
         },
         {
@@ -552,160 +552,6 @@
         },
         {
             "id": 51,
-            "name": "Confederations Cup 2017",
-            "desc": "",
-            "task": "Front end development",
-            "skills": "HTML, CSS, jQuery",
-            "link": "http://www.singaporepools.com.sg/ms/confederations2017/en/index.html",
-            "slug": "confederations-cup",
-            "screen_name": "confederations",
-            "screen_total": 3
-        },
-        {
-            "id": 52,
-            "name": "COPA América 2019",
-            "desc": "",
-            "task": "Front end development",
-            "skills": "HTML, CSS, jQuery",
-            "link": "http://www.singaporepools.com.sg/ms/copa2019/en/index.html",
-            "slug": "copa-america",
-            "screen_name": "copa",
-            "screen_total": 3
-        },
-        {
-            "id": 53,
-            "name": "eBetslip",
-            "desc": "",
-            "task": "Front end development",
-            "skills": "HTML, CSS, jQuery",
-            "link": "http://www.singaporepools.com.sg/ms/ebetslip/en/index.html",
-            "slug": "ebetslip",
-            "screen_name": "ebetslip",
-            "screen_total": 6
-        },
-        {
-            "id": 54,
-            "name": "European Leagues 2018-19 Season",
-            "desc": "",
-            "task": "Front end development",
-            "skills": "HTML, CSS, jQuery",
-            "link": "",
-            "slug": "european-league",
-            "screen_name": "europeanl",
-            "screen_total": 6
-        },
-        {
-            "id": 55,
-            "name": "Football With A Heart (FWAH) 2018 - 19",
-            "desc": "",
-            "task": "Front end development, design for 2018",
-            "skills": "HTML, CSS, jQuery",
-            "link": "http://www.singaporepools.com.sg/ms/fwah2018/index.html",
-            "slug": "fwah",
-            "screen_name": "fwah",
-            "screen_total": 2
-        },
-        {
-            "id": 56,
-            "name": "Learning Festival 2017",
-            "desc": "",
-            "task": "Front end development, design for 2017",
-            "skills": "HTML, CSS, jQuery",
-            "link": "http://www.singaporepools.com.sg/ms/lf2017/index.html",
-            "slug": "lf",
-            "screen_name": "lf",
-            "screen_total": 2
-        },
-        {
-            "id": 57,
-            "name": "Motor Racing 2019",
-            "desc": "",
-            "task": "Front end development",
-            "skills": "HTML, CSS, jQuery",
-            "link": "http://www.singaporepools.com.sg/ms/mr/en/index.html",
-            "slug": "motor-racing",
-            "screen_name": "mr",
-            "screen_total": 3
-        },
-        {
-            "id": 58,
-            "name": "Our Services, FAQ, Terms and Conditions",
-            "desc": "",
-            "task": "Front end development, design",
-            "skills": "HTML, CSS, jQuery",
-            "link": "http://www.singaporepools.com.sg/en/services/Pages/index.html",
-            "slug": "our-services",
-            "screen_name": "services",
-            "screen_total": 3
-        },
-        {
-            "id": 59,
-            "name": "SEA Games 2017",
-            "desc": "",
-            "task": "Front end development",
-            "skills": "HTML, CSS, jQuery",
-            "link": "http://www.singaporepools.com.sg/ms/seagames2017/en/index.html",
-            "slug": "sea-games",
-            "screen_name": "seagames",
-            "screen_total": 3
-        },
-        {
-            "id": 60,
-            "name": "SPPL Remote Mobile App",
-            "desc": "",
-            "task": "Front end development",
-            "skills": "HTML, CSS",
-            "link": "",
-            "slug": "sppl-remote-mobile-app",
-            "screen_name": "spplapp",
-            "screen_total": 8
-        },
-        {
-            "id": 61,
-            "name": "Sweep 2017",
-            "desc": "",
-            "task": "Front end development, design",
-            "skills": "HTML, CSS, jQuery",
-            "link": "http://www.singaporepools.com.sg/ms/sweep/en/index.html",
-            "slug": "sweep",
-            "screen_name": "sweep",
-            "screen_total": 5
-        },
-        {
-            "id": 62,
-            "name": "S.League 2017 - 20",
-            "desc": "",
-            "task": "Front end development",
-            "skills": "HTML, CSS, jQuery",
-            "link": "http://www.singaporepools.com.sg/ms/sleague20/en/index.html",
-            "slug": "sleague",
-            "screen_name": "sleague",
-            "screen_total": 6
-        },
-        {
-            "id": 63,
-            "name": "Only with a Singapore Pools Account",
-            "desc": "",
-            "task": "Front end development",
-            "skills": "HTML, CSS, jQuery",
-            "link": "http://www.singaporepools.com.sg/ms/spa/en/index.html",
-            "slug": "spa",
-            "screen_name": "spa",
-            "screen_total": 3
-        },
-        {
-            "id": 64,
-            "name": "Claiming a Prize?",
-            "desc": "",
-            "task": "Front end development",
-            "skills": "HTML, CSS, jQuery, Vue.js",
-            "link": "http://www.singaporepools.com.sg/ms/claim/en/index.html",
-            "slug": "claim",
-            "screen_name": "claim",
-            "screen_total": 4
-        },
-        {
-            "id": 65,
             "name": "Lottery Result Pages Carousel",
             "desc": "<p>Create a carousel using Vue.js that can schedule banners and share across multiples lottery result pages</p>",
             "task": "Front end development",
@@ -716,7 +562,29 @@
             "screen_total": 4
         },
         {
-            "id": 66,
+            "id": 52,
+            "name": "Our Services, FAQ, Terms and Conditions",
+            "desc": "",
+            "task": "Front end development, design",
+            "skills": "HTML, CSS, jQuery",
+            "link": "http://www.singaporepools.com.sg/en/services/Pages/index.html",
+            "slug": "our-services",
+            "screen_name": "services",
+            "screen_total": 3
+        },
+        {
+            "id": 53,
+            "name": "Sweep 2017",
+            "desc": "",
+            "task": "Front end development, design",
+            "skills": "HTML, CSS, jQuery",
+            "link": "http://www.singaporepools.com.sg/ms/sweep/en/index.html",
+            "slug": "sweep",
+            "screen_name": "sweep",
+            "screen_total": 5
+        },
+        {
+            "id": 54,
             "name": "TOTO New Year Draw 2018 - 20",
             "desc": "<p>Microsite and Static Result</p>",
             "task": "Front end development",
@@ -727,7 +595,7 @@
             "screen_total": 12
         },
         {
-            "id": 67,
+            "id": 55,
             "name": "TOTO Reunion Draw 2018 - 20",
             "desc": "<p>Microsite and Static Result</p>",
             "task": "Front end development",
@@ -738,7 +606,7 @@
             "screen_total": 12
         },
         {
-            "id": 68,
+            "id": 56,
             "name": "TOTO Hong Bao Draw 2017",
             "desc": "<p>Microsite and Static Result</p>",
             "task": "Front end development",
@@ -749,7 +617,7 @@
             "screen_total": 7
         },
         {
-            "id": 69,
+            "id": 57,
             "name": "TOTO Hong Bao Draw 2018",
             "desc": "<p>Microsite and Static Result</p>",
             "task": "Front end development",
@@ -760,7 +628,7 @@
             "screen_total": 7
         },
         {
-            "id": 70,
+            "id": 58,
             "name": "TOTO Hong Bao Draw 2019",
             "desc": "<p>Microsite and Static Result</p>",
             "task": "Front end development",
@@ -771,7 +639,7 @@
             "screen_total": 7
         },
         {
-            "id": 71,
+            "id": 59,
             "name": "TOTO Hong Bao Draw 2020",
             "desc": "<p>Microsite and Static Result</p>",
             "task": "Front end development",
@@ -780,6 +648,138 @@
             "slug": "hong-bao-draw-2020",
             "screen_name": "hbd20",
             "screen_total": 7
+        },
+        {
+            "id": 60,
+            "name": "Motor Racing 2019",
+            "desc": "",
+            "task": "Front end development",
+            "skills": "HTML, CSS, jQuery",
+            "link": "http://www.singaporepools.com.sg/ms/mr/en/index.html",
+            "slug": "motor-racing",
+            "screen_name": "mr",
+            "screen_total": 3
+        },
+        {
+            "id": 61,
+            "name": "Confederations Cup 2017",
+            "desc": "",
+            "task": "Front end development",
+            "skills": "HTML, CSS, jQuery",
+            "link": "http://www.singaporepools.com.sg/ms/confederations2017/en/index.html",
+            "slug": "confederations-cup",
+            "screen_name": "confederations",
+            "screen_total": 3
+        },
+        {
+            "id": 62,
+            "name": "SEA Games 2017",
+            "desc": "",
+            "task": "Front end development",
+            "skills": "HTML, CSS, jQuery",
+            "link": "http://www.singaporepools.com.sg/ms/seagames2017/en/index.html",
+            "slug": "sea-games",
+            "screen_name": "seagames",
+            "screen_total": 3
+        },
+        {
+            "id": 63,
+            "name": "European Leagues 2018-19 Season",
+            "desc": "",
+            "task": "Front end development",
+            "skills": "HTML, CSS, jQuery",
+            "link": "",
+            "slug": "european-league",
+            "screen_name": "europeanl",
+            "screen_total": 6
+        },
+        {
+            "id": 64,
+            "name": "COPA América 2019",
+            "desc": "",
+            "task": "Front end development",
+            "skills": "HTML, CSS, jQuery",
+            "link": "http://www.singaporepools.com.sg/ms/copa2019/en/index.html",
+            "slug": "copa-america",
+            "screen_name": "copa",
+            "screen_total": 3
+        },
+        {
+            "id": 65,
+            "name": "S.League 2017 - 20",
+            "desc": "",
+            "task": "Front end development",
+            "skills": "HTML, CSS, jQuery",
+            "link": "http://www.singaporepools.com.sg/ms/sleague20/en/index.html",
+            "slug": "sleague",
+            "screen_name": "sleague",
+            "screen_total": 6
+        },
+        {
+            "id": 66,
+            "name": "Learning Festival 2017",
+            "desc": "",
+            "task": "Front end development, design for 2017",
+            "skills": "HTML, CSS, jQuery",
+            "link": "http://www.singaporepools.com.sg/ms/lf2017/index.html",
+            "slug": "lf",
+            "screen_name": "lf",
+            "screen_total": 2
+        },
+        {
+            "id": 67,
+            "name": "eBetslip",
+            "desc": "",
+            "task": "Front end development",
+            "skills": "HTML, CSS, jQuery",
+            "link": "http://www.singaporepools.com.sg/ms/ebetslip/en/index.html",
+            "slug": "ebetslip",
+            "screen_name": "ebetslip",
+            "screen_total": 6
+        },
+        {
+            "id": 68,
+            "name": "Football With A Heart (FWAH) 2018 - 19",
+            "desc": "",
+            "task": "Front end development, design for 2018",
+            "skills": "HTML, CSS, jQuery",
+            "link": "http://www.singaporepools.com.sg/ms/fwah2018/index.html",
+            "slug": "fwah",
+            "screen_name": "fwah",
+            "screen_total": 2
+        },
+        {
+            "id": 69,
+            "name": "Only with a Singapore Pools Account",
+            "desc": "",
+            "task": "Front end development",
+            "skills": "HTML, CSS, jQuery",
+            "link": "http://www.singaporepools.com.sg/ms/spa/en/index.html",
+            "slug": "spa",
+            "screen_name": "spa",
+            "screen_total": 3
+        },
+        {
+            "id": 70,
+            "name": "Claiming a Prize?",
+            "desc": "",
+            "task": "Front end development",
+            "skills": "HTML, CSS, jQuery, Vue.js",
+            "link": "http://www.singaporepools.com.sg/ms/claim/en/index.html",
+            "slug": "claim",
+            "screen_name": "claim",
+            "screen_total": 4
+        },
+        {
+            "id": 71,
+            "name": "SPPL Remote Mobile App",
+            "desc": "",
+            "task": "Front end development",
+            "skills": "HTML, CSS",
+            "link": "",
+            "slug": "sppl-remote-mobile-app",
+            "screen_name": "spplapp",
+            "screen_total": 8
         }
     ]
 }

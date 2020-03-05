@@ -119,8 +119,7 @@ a
 
         .thumbnail
         {
-            background-color: color(alto);
-            width: 57.6rem;
+            display: block;
             transition-duration: 0.3s;
             transition-property: color, background-color, opacity;
         }
