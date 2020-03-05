@@ -1,8 +1,8 @@
 Vue.mixin ({
     data() {
         return {
-            jsonFiles: 'http://192.168.86.22:8080/includes/my-portfolio.json',
-            //jsonFiles: 'https://meltz.github.io/includes/my-portfolio.json',
+            // jsonFiles: 'http://192.168.86.22:8080/includes/my-portfolio.json',
+            jsonFiles: 'https://meltz.github.io/includes/my-portfolio.json',
             myPortfolio: [],
             loading: true,
             errored: false,
@@ -80,6 +80,23 @@ Vue.component('topnav', {
     </nav><!-- #top-nav-section -->`
 })
 
+Vue.component('page-not-found', {
+    props: ['backBtn'],
+    template:
+    `<div class="page-not-found">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-5">
+                    <h3 class="name">404 Error</h3>
+                    <p>Page not found</p>
+                    <p>{{ this.back }}</p>
+                    <router-link to="/" v-if="this.backBtn" class="link-btn">Back</router-link>
+                </div>
+            </div>
+        </div>
+    </div><!-- .page-not-found -->`
+})
+
 const Home = {
     computed: {
         latestProjects() {
@@ -89,22 +106,32 @@ const Home = {
     template:
     `<div id="main-section">
         <topnav :display="false"></topnav>
-        <div id="portfolio-section">
-            <div class="container-fluid">
-                <div class="row justify-content-center">
-                    <div v-for="project in latestProjects" :key="project.id" class="col-sm-auto col-md-auto col-lg-auto">
-                        <router-link :to="'/project/' + project.slug" :id="'p-' + project.id" class="project">
-                            <img :src="'/' + portfolioFolder + '/' + project.screen_name + '/' + project.screen_name + '-thumb.jpg'" :alt="project.name" class="img-fluid thumbnail">
-                            <div class="portfolio-content">
-                                <h3>{{ project.name }}</h3>
-                                <p class="task">{{ project.task }}</p>
-                                <p class="skills">{{ project.skills }}</p>
+        <div v-if="!this.errored">
+
+            <div id="portfolio-section">
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+
+                        <p>{{  'loading: ' + this.loading }}</p>
+
+                            <div v-for="project in latestProjects" :key="project.id" class="col-sm-auto col-md-auto col-lg-auto">
+                                <router-link :to="'/project/' + project.slug" :id="'p-' + project.id" class="project">
+                                    <img :src="'/' + portfolioFolder + '/' + project.screen_name + '/' + project.screen_name + '-thumb.jpg'" :alt="project.name" class="img-fluid thumbnail">
+                                    <div class="portfolio-content">
+                                        <h3>{{ project.name }}</h3>
+                                        <p class="task">{{ project.task }}</p>
+                                        <p class="skills">{{ project.skills }}</p>
+                                    </div>
+                                </router-link>
                             </div>
-                        </router-link>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div><!-- #portfolio-section -->
+            </div><!-- #portfolio-section -->
+
+        <div v-else>
+            <page-not-found :back-btn="false"></page-not-found>
+        </div>
     </div><!-- #main-section -->`
 }
 
@@ -129,7 +156,7 @@ const Project = {
                                         <div v-if="project.desc" class="desc" v-html="project.desc"></div>
                                         <p class="task">{{ project.task }}</p>
                                         <p class="skills">{{ project.skills }}</p>
-                                        <a v-if="project.link" :href="project.link" target="_blank" class="link"><span class="link-text">Visit the site</span></a>
+                                        <a v-if="project.link" :href="project.link" target="_blank" class="link-btn"><span class="link-text">Visit the site</span></a>
                                     </div><!-- .project-detail -->
                                 </div>
                             </div>
@@ -144,8 +171,8 @@ const Project = {
             </div>
         </div>
         <div v-else>
-            <p>404 Page not found</p>
-            <p><router-link to="/">Back</router-link></p>
+            <topnav :display="false"></topnav>
+            <page-not-found :back-btn="true"></page-not-found>
         </div>
     </div><!-- #main-section -->`
 }

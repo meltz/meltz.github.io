@@ -119,6 +119,8 @@ a
 
         .thumbnail
         {
+            background-color: color(alto);
+            width: 57.6rem;
             transition-duration: 0.3s;
             transition-property: color, background-color, opacity;
         }
@@ -194,21 +196,6 @@ a
             color: color(tundora);
             font-size: 1.4rem;
         }
-
-        .link
-        {
-        	display: inline-block;
-            background-color: color(tundora);
-        	padding: 0.5rem 1rem;
-        	margin-top: 2rem;
-        	color: color(white);
-            font-size: 1.4rem;
-
-            &:hover
-            {
-            	background-color: color(alto);
-            }
-        }
     }
 
     .project-screens-section
@@ -225,6 +212,39 @@ a
                 margin-bottom: 0;
             }
         }
+    }
+}
+
+.link-btn
+{
+    display: inline-block;
+    background-color: color(tundora);
+    padding: 0.5rem 1rem;
+    margin-top: 2rem;
+    color: color(white);
+    font-size: 1.4rem;
+
+    &:hover
+    {
+        background-color: color(alto);
+    }
+}
+
+.page-not-found
+{
+    padding: 5rem 0;
+
+    h3
+    {
+        font-size: 4rem;
+        color: color(tundora);
+        font-weight: 300;
+    }
+
+    p
+    {
+        font-size: 2rem;
+        font-weight: 300;
     }
 }
 
@@ -312,6 +332,19 @@ a
                     padding-right: 1rem;
                 }
             }
+        }
+    }
+
+    #portfolio-section
+    {
+        margin-top: 2rem;
+    }
+
+    #project-section
+    {
+        .project-screens-section
+        {
+            margin-top: 2rem;
         }
     }
 }
