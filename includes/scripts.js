@@ -98,16 +98,6 @@ Vue.component('page-not-found', {
 })
 
 const Home = {
-    data() {
-        return {
-            loadingImg: false
-        }
-    },
-    methods: {
-        loadImg() {
-            return this.loadingImg = true
-        }
-    },
     computed: {
         latestProjects() {
             return this.myPortfolio.reverse()
@@ -117,54 +107,22 @@ const Home = {
     `<div id="main-section">
         <topnav :display="false"></topnav>
         <div v-if="!this.errored">
-
-            <div v-if="this.loading">
-
-
-            </div>
-
-            <div v-else>
-
             <div id="portfolio-section">
                 <div class="container-fluid">
                     <div class="row justify-content-center">
                         <div v-for="project in latestProjects" :key="project.id" class="col-sm-auto col-md-auto col-lg-auto">
-
-                            <div class="placeholder pulse" v-if="loadingImg === false">
-
-                              <div class="square"></div>
-
-                              <div class="line"></div>
-                              <div class="line"></div>
-                              <div class="line"></div>
-
-                            </div>
-
-
-
-                            <router-link :to="'/project/' + project.slug" :id="'p-' + project.id" class="project" v-show="loadingImg">
-
-
-
-
-                                <img :src="'/' + portfolioFolder + '/' + project.screen_name + '/' + project.screen_name + '-thumb.jpg'" :alt="project.name" class="img-fluid thumbnail" @load="loadImg">
-
-
-
+                            <router-link :to="'/project/' + project.slug" :id="'p-' + project.id" class="project">
+                                <img :src="'/' + portfolioFolder + '/' + project.screen_name + '/' + project.screen_name + '-thumb.jpg'" :alt="project.name" class="img-fluid thumbnail">
                                 <div class="portfolio-content">
                                     <h3>{{ project.name }}</h3>
                                     <p class="task">{{ project.task }}</p>
                                     <p class="skills">{{ project.skills }}</p>
                                 </div>
                             </router-link>
-
                         </div>
                     </div>
                 </div>
             </div><!-- #portfolio-section -->
-
-            </div>
-
         </div>
         <div v-else>
             <page-not-found :back-btn="false"></page-not-found>
@@ -193,9 +151,6 @@ const Project = {
         <div v-if="filterProject && filterProject.length">
             <div v-for="project in filterProject">
                 <topnav :display="true" :project="project.id"></topnav>
-
-
-
                 <div id="project-section">
                     <div class="project-detail-section">
                         <div class="container">
@@ -213,24 +168,8 @@ const Project = {
                         </div>
                     </div><!-- .project-detail-section -->
                     <div class="project-screens-section">
-
                         <div v-for="screen in project.screen_total" class="screenshot">
-
-
-                            <div class="placeholder pulse" v-if="loadingImg === false">
-
-                              <div class="square"></div>
-
-                              <div class="line"></div>
-                              <div class="line"></div>
-                              <div class="line"></div>
-
-                            </div>
-
-                            <img :src="'/' + portfolioFolder + '/' + project.screen_name + '/' + project.screen_name + '-' + screen + '.jpg'" :alt="project.name" class="img-fluid" @load="loadImg" v-show="loadingImg">
-
-
-
+                            <img :src="'/' + portfolioFolder + '/' + project.screen_name + '/' + project.screen_name + '-' + screen + '.jpg'" :alt="project.name" class="img-fluid">
                         </div>
                     </div><!-- .project-screens-section -->
                 </div><!-- #project-section -->
