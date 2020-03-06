@@ -98,6 +98,16 @@ Vue.component('page-not-found', {
 })
 
 const Home = {
+    data() {
+        return {
+            loadingImg: false
+        }
+    },
+    methods: {
+        loadImg() {
+            return this.loadingImg = true
+        }
+    },
     computed: {
         latestProjects() {
             return this.myPortfolio.reverse()
@@ -119,14 +129,35 @@ const Home = {
                 <div class="container-fluid">
                     <div class="row justify-content-center">
                         <div v-for="project in latestProjects" :key="project.id" class="col-sm-auto col-md-auto col-lg-auto">
-                            <router-link :to="'/project/' + project.slug" :id="'p-' + project.id" class="project">
-                                <img :src="'/' + portfolioFolder + '/' + project.screen_name + '/' + project.screen_name + '-thumb.jpg'" :alt="project.name" class="img-fluid thumbnail">
+
+                            <div class="placeholder pulse" v-if="loadingImg === false">
+
+                              <div class="square"></div>
+
+                              <div class="line"></div>
+                              <div class="line"></div>
+                              <div class="line"></div>
+
+                            </div>
+
+
+
+                            <router-link :to="'/project/' + project.slug" :id="'p-' + project.id" class="project" v-show="loadingImg">
+
+
+
+
+                                <img :src="'/' + portfolioFolder + '/' + project.screen_name + '/' + project.screen_name + '-thumb.jpg'" :alt="project.name" class="img-fluid thumbnail" @load="loadImg">
+
+
+
                                 <div class="portfolio-content">
                                     <h3>{{ project.name }}</h3>
                                     <p class="task">{{ project.task }}</p>
                                     <p class="skills">{{ project.skills }}</p>
                                 </div>
                             </router-link>
+
                         </div>
                     </div>
                 </div>
@@ -193,10 +224,6 @@ const Project = {
                               <div class="line"></div>
                               <div class="line"></div>
                               <div class="line"></div>
-
-                              <div class="circle"></div>
-                              <div class="circle"></div>
-                              <div class="circle"></div>
 
                             </div>
 
