@@ -1,12 +1,12 @@
 Vue.mixin ({
     data() {
         return {
-            // jsonFiles: 'http://192.168.86.22:8080/includes/my-portfolio.json',
-            jsonFiles: 'https://meltz.github.io/includes/my-portfolio.json',
+            jsonFiles: 'http://192.168.86.22:8080/includes/my-portfolio.json',
+            //jsonFiles: 'https://meltz.github.io/includes/my-portfolio.json',
             myPortfolio: [],
             loading: true,
             errored: false,
-            portfolioFolder: 'portfolio',
+            portfolioFolder: 'portfolio'
         }
     },
     mounted() {
@@ -107,23 +107,34 @@ const Home = {
     `<div id="main-section">
         <topnav :display="false"></topnav>
         <div v-if="!this.errored">
+
+            <div v-if="this.loading">
+
+
+            </div>
+
+            <div v-else>
+
             <div id="portfolio-section">
                 <div class="container-fluid">
                     <div class="row justify-content-center">
-                            <div v-for="project in latestProjects" :key="project.id" class="col-sm-auto col-md-auto col-lg-auto">
-                                <router-link :to="'/project/' + project.slug" :id="'p-' + project.id" class="project">
-                                    <img :src="'/' + portfolioFolder + '/' + project.screen_name + '/' + project.screen_name + '-thumb.jpg'" :alt="project.name" class="img-fluid thumbnail">
-                                    <div class="portfolio-content">
-                                        <h3>{{ project.name }}</h3>
-                                        <p class="task">{{ project.task }}</p>
-                                        <p class="skills">{{ project.skills }}</p>
-                                    </div>
-                                </router-link>
-                            </div>
+                        <div v-for="project in latestProjects" :key="project.id" class="col-sm-auto col-md-auto col-lg-auto">
+                            <router-link :to="'/project/' + project.slug" :id="'p-' + project.id" class="project">
+                                <img :src="'/' + portfolioFolder + '/' + project.screen_name + '/' + project.screen_name + '-thumb.jpg'" :alt="project.name" class="img-fluid thumbnail">
+                                <div class="portfolio-content">
+                                    <h3>{{ project.name }}</h3>
+                                    <p class="task">{{ project.task }}</p>
+                                    <p class="skills">{{ project.skills }}</p>
+                                </div>
+                            </router-link>
                         </div>
                     </div>
                 </div>
             </div><!-- #portfolio-section -->
+
+            </div>
+
+        </div>
         <div v-else>
             <page-not-found :back-btn="false"></page-not-found>
         </div>
@@ -131,16 +142,29 @@ const Home = {
 }
 
 const Project = {
+    data() {
+        return {
+            loadingImg: false
+        }
+    },
+    methods: {
+        loadImg() {
+            return this.loadingImg = true
+        }
+    },
     computed: {
         filterProject() {
             return this.myPortfolio.filter(project => project.slug == this.$route.params.slug)
-        },
+        }
     },
     template:
     `<div id="main-section">
         <div v-if="filterProject && filterProject.length">
             <div v-for="project in filterProject">
                 <topnav :display="true" :project="project.id"></topnav>
+
+
+
                 <div id="project-section">
                     <div class="project-detail-section">
                         <div class="container">
@@ -158,8 +182,28 @@ const Project = {
                         </div>
                     </div><!-- .project-detail-section -->
                     <div class="project-screens-section">
+
                         <div v-for="screen in project.screen_total" class="screenshot">
-                            <img :src="'/' + portfolioFolder + '/' + project.screen_name + '/' + project.screen_name + '-' + screen + '.jpg'" :alt="project.name" class="img-fluid">
+
+
+                            <div class="placeholder pulse" v-if="loadingImg === false">
+
+                              <div class="square"></div>
+
+                              <div class="line"></div>
+                              <div class="line"></div>
+                              <div class="line"></div>
+
+                              <div class="circle"></div>
+                              <div class="circle"></div>
+                              <div class="circle"></div>
+
+                            </div>
+
+                            <img :src="'/' + portfolioFolder + '/' + project.screen_name + '/' + project.screen_name + '-' + screen + '.jpg'" :alt="project.name" class="img-fluid" @load="loadImg" v-show="loadingImg">
+
+
+
                         </div>
                     </div><!-- .project-screens-section -->
                 </div><!-- #project-section -->

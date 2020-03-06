@@ -54,6 +54,63 @@ a
     }
 }
 
+.placeholder{
+  margin:15px;
+  padding:10px;
+  height: 115px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+
+.placeholder div{background:#E8E8E8;}
+
+.placeholder .square{
+  float:left;
+  width: 90px;
+  height:56px;
+  margin:0 0 10px;
+}
+
+.placeholder .line{height:12px;margin:0 0 10px 105px;}
+.placeholder .line:nth-child(2){width: 120px;}
+.placeholder .line:nth-child(3){width: 170px;}
+.placeholder .line:nth-child(4){width: 150px;}
+
+.placeholder .circle{
+  float:left;
+  width: 15px;
+  height:15px;
+  margin:0 15px 10px 0;
+  border-radius:15px;
+}
+
+/*
+  --------------
+  Pulse effect animation
+  Activated by adding a '.pulse' class to the placeholder
+  --------------
+*/
+
+.placeholder.pulse div{
+  animation: pulse 1s infinite ease-in-out;
+  -webkit-animation:pulse 1s infinite ease-in-out;
+}
+
+@keyframes pulse
+{
+  0%{
+    background-color: rgba(165,165,165,.1);
+  }
+  50%{
+    background-color: rgba(165,165,165,.3);
+  }
+  100%{
+    background-color: rgba(165,165,165,.1);
+  }
+}
+
+
+
 /* #top-nav-section */
 #top-nav-section
 {
