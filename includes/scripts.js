@@ -1,8 +1,8 @@
 Vue.mixin ({
     data() {
         return {
-            jsonFiles: 'http://192.168.86.22:8080/includes/my-portfolio.json',
-            //jsonFiles: 'https://meltz.github.io/includes/my-portfolio.json',
+            //jsonFiles: 'http://192.168.86.22:8080/includes/my-portfolio.json',
+            jsonFiles: 'https://meltz.github.io/includes/my-portfolio.json',
             myPortfolio: [],
             loading: true,
             errored: false,
