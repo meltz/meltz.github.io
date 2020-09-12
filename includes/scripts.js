@@ -1,8 +1,8 @@
 Vue.mixin ({
     data() {
         return {
-            //jsonFiles: 'http://192.168.86.22:8080/includes/my-portfolio.json',
-            jsonFiles: 'https://meltz.github.io/includes/my-portfolio.json',
+            jsonFiles: 'http://192.168.86.22:8080/includes/my-portfolio.json',
+            //jsonFiles: 'https://meltz.github.io/includes/my-portfolio.json',
             myPortfolio: [],
             loading: true,
             errored: false,
@@ -104,7 +104,7 @@ const Home = {
         }
     },
     template:
-    `<div id="main-section">
+    `<div id="main-section" v-cloak>
         <topnav :display="false"></topnav>
         <div v-if="!this.errored">
             <div id="portfolio-section">
