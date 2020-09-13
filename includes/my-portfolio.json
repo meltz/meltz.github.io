@@ -655,7 +655,7 @@
             "desc": "",
             "task": "Front end development",
             "skills": "HTML, CSS, jQuery",
-            "link": "http://www.singaporepools.com.sg/ms/mr/en/index.html",
+            "link": "http://www.singaporepools.com.sg/ms/mr20/en/index.html",
             "slug": "motor-racing",
             "screen_name": "mr",
             "screen_total": 6
@@ -780,6 +780,17 @@
             "slug": "sppl-remote-mobile-app",
             "screen_name": "spplapp",
             "screen_total": 8
+        },
+        {
+            "id": 72,
+            "name": "Betting Behaviour Self-Assessment 20",
+            "desc": "<p>For customer to determine their betting behaviour</p>",
+            "task": "Front end development",
+            "skills": "HTML, CSS, Vue.js",
+            "link": "http://www.singaporepools.com.sg/ms/rg/en/index.html",
+            "slug": "betting-behaviour-self-assessment-20",
+            "screen_name": "bettingbsa20",
+            "screen_total": 5
         }
     ]
 }
