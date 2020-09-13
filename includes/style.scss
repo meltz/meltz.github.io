@@ -159,6 +159,54 @@ a
             }
         }
     }
+
+    .skeleton-project
+    {
+        display: block;
+        background: color(white);
+        margin-bottom: 1.3rem;
+        width: 57.6rem;
+        height: 27.5rem;
+
+        .skeleton-thumbnail
+        {
+            display: block;
+            background-color: color(alto);
+            padding: 2rem;
+            width: inherit;
+            height: 18.8rem;
+            border: 1px solid color(white);
+        }
+
+        .skeleton-content
+        {
+            padding: 1.3rem 2rem;
+        }
+
+        .skeleton-header
+        {
+            display: block;
+            background-color: color(alto);
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            width: 70%;
+        }
+
+        .skeleton-task
+        {
+            display: block;
+            background-color: color(alto);
+            padding: 0.5rem;
+            margin-bottom: 0.6rem;
+            width: 50%;
+
+            &.skeleton-skill
+            {
+                margin-bottom: 0;
+                width: 30%;
+            }
+        }
+    }
 }
 
 /* #project-section */
@@ -342,6 +390,17 @@ a
     #portfolio-section
     {
         margin-top: 2rem;
+
+        .skeleton-project
+        {
+            width: 49.5rem;
+            height: 23.5rem;
+
+            .skeleton-thumbnail
+            {
+                height: 14.6rem;
+            }
+        }
     }
 
     #project-section
@@ -355,10 +414,36 @@ a
 
 @media (max-width: 414px)
 {
+    #portfolio-section
+    {
+        .skeleton-project
+        {
+            width: 42.5rem;
+            height: 22.5rem;
+
+            .skeleton-thumbnail
+            {
+                height: 14.5rem;
+            }
+        }
+    }
 }
 
 @media (max-width: 375px)
 {
+    #portfolio-section
+    {
+        .skeleton-project
+        {
+            width: 38rem;
+            height: 21rem;
+
+            .skeleton-thumbnail
+            {
+                height: 13rem;
+            }
+        }
+    }
 }
 
 @media (max-width: 360px)
@@ -367,8 +452,24 @@ a
     {
         font-size: 8px;
     }
+
+    #portfolio-section
+    {
+        .skeleton-project
+        {
+            width: 41rem;
+        }
+    }
 }
 
 @media (max-width: 320px)
 {
+    #portfolio-section
+    {
+        .skeleton-project
+        {
+            width: 36rem;
+            height: 20.5rem;
+        }
+    }
 }

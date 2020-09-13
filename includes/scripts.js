@@ -1,12 +1,13 @@
 Vue.mixin ({
     data() {
         return {
-            //jsonFiles: 'http://192.168.86.22:8080/includes/my-portfolio.json',
+            // jsonFiles: 'http://192.168.86.22:8080/includes/my-portfolio.json',
             jsonFiles: 'https://meltz.github.io/includes/my-portfolio.json',
             myPortfolio: [],
             loading: true,
             errored: false,
-            portfolioFolder: 'portfolio'
+            portfolioFolder: 'portfolio',
+            skeleton: 10
         }
     },
     mounted() {
@@ -108,17 +109,35 @@ const Home = {
         <topnav :display="false"></topnav>
         <div v-if="!this.errored">
             <div id="portfolio-section">
-                <div class="container-fluid">
-                    <div class="row justify-content-center">
-                        <div v-for="project in latestProjects" :key="project.id" class="col-sm-auto col-md-auto col-lg-auto">
-                            <router-link :to="'/project/' + project.slug" :id="'p-' + project.id" class="project">
-                                <img :src="'/' + portfolioFolder + '/' + project.screen_name + '/' + project.screen_name + '-thumb.jpg'" :alt="project.name" class="img-fluid thumbnail">
-                                <div class="portfolio-content">
-                                    <h3>{{ project.name }}</h3>
-                                    <p class="task">{{ project.task }}</p>
-                                    <p class="skills">{{ project.skills }}</p>
+                <div v-if="!this.loading">
+                    <div class="container-fluid">
+                        <div class="row justify-content-center">
+                                <div v-for="project in latestProjects" :key="project.id" class="col-sm-auto col-md-auto col-lg-auto">
+                                    <router-link :to="'/project/' + project.slug" :id="'p-' + project.id" class="project">
+                                        <img :src="'/' + portfolioFolder + '/' + project.screen_name + '/' + project.screen_name + '-thumb.jpg'" :alt="project.name" class="img-fluid thumbnail">
+                                        <div class="portfolio-content">
+                                            <h3>{{ project.name }}</h3>
+                                            <p class="task">{{ project.task }}</p>
+                                            <p class="skills">{{ project.skills }}</p>
+                                        </div>
+                                    </router-link>
                                 </div>
-                            </router-link>
+                        </div>
+                    </div>
+                </div>
+                <div v-else>
+                    <div class="container-fluid">
+                        <div class="row justify-content-center">
+                            <div v-for="(skele, index) in skeleton" :index="index" class="col-sm-auto col-md-auto col-lg-auto">
+                                <div class="skeleton-project">
+                                    <div class="skeleton-thumbnail"></div>
+                                    <div class="skeleton-content">
+                                        <h3 class="skeleton-header"></h3>
+                                        <p class="skeleton-task"></p>
+                                        <p class="skeleton-task skeleton-skill"></p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
