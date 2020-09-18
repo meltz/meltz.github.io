@@ -166,7 +166,7 @@ const Project = {
         }
     },
     template:
-    `<div id="main-section">
+    `<div id="main-section" v-cloak>
         <div v-if="filterProject && filterProject.length">
             <div v-for="project in filterProject">
                 <topnav :display="true" :project="project.id"></topnav>
