@@ -1,7 +1,7 @@
 Vue.mixin ({
     data() {
         return {
-            //jsonFiles: 'http://192.168.86.22:8080/includes/my-portfolio.json',
+            // jsonFiles: 'http://192.168.86.22:8080/includes/my-portfolio.json',
             jsonFiles: 'https://meltz.github.io/includes/my-portfolio.json',
             myPortfolio: [],
             loading: true,
@@ -150,16 +150,6 @@ const Home = {
 }
 
 const Project = {
-    data() {
-        return {
-            loadingImg: false
-        }
-    },
-    methods: {
-        loadImg() {
-            return this.loadingImg = true
-        }
-    },
     computed: {
         filterProject() {
             return this.myPortfolio.filter(project => project.slug == this.$route.params.slug)
@@ -167,36 +157,38 @@ const Project = {
     },
     template:
     `<div id="main-section" v-cloak>
-        <div v-if="filterProject && filterProject.length">
-            <div v-for="project in filterProject">
-                <topnav :display="true" :project="project.id"></topnav>
-                <div id="project-section">
-                    <div class="project-detail-section">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-12 col-md-8">
-                                    <div class="project-detail">
-                                        <h3 class="name">{{ project.name }}</h3>
-                                        <div v-if="project.desc" class="desc" v-html="project.desc"></div>
-                                        <p class="task">{{ project.task }}</p>
-                                        <p class="skills">{{ project.skills }}</p>
-                                        <a v-if="project.link" :href="project.link" target="_blank" class="link-btn"><span class="link-text">Visit the site</span></a>
-                                    </div><!-- .project-detail -->
+        <div v-if="!this.loading">
+            <div v-if="filterProject && filterProject.length">
+                <div v-for="project in filterProject">
+                    <topnav :display="true" :project="project.id"></topnav>
+                    <div id="project-section">
+                        <div class="project-detail-section">
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-12 col-md-8">
+                                        <div class="project-detail">
+                                            <h3 class="name">{{ project.name }}</h3>
+                                            <div v-if="project.desc" class="desc" v-html="project.desc"></div>
+                                            <p class="task">{{ project.task }}</p>
+                                            <p class="skills">{{ project.skills }}</p>
+                                            <a v-if="project.link" :href="project.link" target="_blank" class="link-btn"><span class="link-text">Visit the site</span></a>
+                                        </div><!-- .project-detail -->
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div><!-- .project-detail-section -->
-                    <div class="project-screens-section">
-                        <div v-for="screen in project.screen_total" class="screenshot">
-                            <img :src="'/' + portfolioFolder + '/' + project.screen_name + '/' + project.screen_name + '-' + screen + '.jpg'" :alt="project.name" class="img-fluid">
-                        </div>
-                    </div><!-- .project-screens-section -->
-                </div><!-- #project-section -->
+                        </div><!-- .project-detail-section -->
+                        <div class="project-screens-section">
+                            <div v-for="screen in project.screen_total" class="screenshot">
+                                <img :src="'/' + portfolioFolder + '/' + project.screen_name + '/' + project.screen_name + '-' + screen + '.jpg'" :alt="project.name" class="img-fluid">
+                            </div>
+                        </div><!-- .project-screens-section -->
+                    </div><!-- #project-section -->
+                </div>
             </div>
-        </div>
-        <div v-else>
-            <topnav :display="false"></topnav>
-            <page-not-found :back-btn="true"></page-not-found>
+            <div v-else>
+                <topnav :display="false"></topnav>
+                <page-not-found :back-btn="true"></page-not-found>
+            </div>
         </div>
     </div><!-- #main-section -->`
 }
@@ -224,7 +216,7 @@ const router = new VueRouter ({
             component: Home
         }
     ],
-    scrollBehavior (to, from, savedPosition) {
+    scrollBehavior(to, from, savedPosition) {
         return { x: 0, y: 0 }
     }
 })
