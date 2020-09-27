@@ -783,6 +783,17 @@
         },
         {
             "id": 72,
+            "name": "Qatar Prix de l'Arc de Triomphe",
+            "desc": "",
+            "task": "Front end development",
+            "skills": "HTML, CSS, jQuery",
+            "link": "https://www.singaporepools.com.sg/ms/arc20/en/index.html",
+            "slug": "arc",
+            "screen_name": "arc",
+            "screen_total": 3
+        },
+        {
+            "id": 73,
             "name": "Betting Behaviour Self-Assessment 20",
             "desc": "<p>For customer to determine their betting behaviour</p>",
             "task": "Front end development",
