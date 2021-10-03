@@ -302,7 +302,7 @@ strong
 /* #packs-available-section */
 #packs-available-section
 {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     text-align: center;
 
     h2
@@ -703,9 +703,13 @@ strong
 
 @media (max-width: 480px)
 {
+    .logo
+    {
+        width: 30%
+    }
+
     #featured-section
     {
-        padding-top: 9rem;
     }
 
     #featured-tagline-section
@@ -723,7 +727,7 @@ strong
 
     #packs-available-section
     {
-        margin-bottom: 3.5rem;
+        margin-bottom: 2rem;
 
         h2
         {
