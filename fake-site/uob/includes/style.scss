@@ -1,0 +1,799 @@
+/* Functions */
+$font: 'Roboto', 'Helvetica', arial, sans-serif;
+
+@function color($color)
+{
+    @return map-get($colors, $color);
+}
+
+$colors: (
+    cardinal: #c02127,
+    tango: #e96626,
+    sun: #faa61a,
+    cream-brulee: #ffdd9c,
+    kumera: #905a24,
+    golden-tainoi: #ffc95f,
+    papaya-whip: #fff2d4,
+    driftwood: #b18d43,
+    shingle-fawn: #62532c,
+    black: #000,
+    zeus: #120f0d,
+    abbey: #4b4d4f,
+    silver-chalice: #a9a7a7,
+    white: #fff
+);
+
+$bg-gradient: linear-gradient(to bottom, color(driftwood) 30%, color(shingle-fawn) 60%);
+$gold-gradient: linear-gradient(to left, color(white) 0, color(cream-brulee) 40%, color(kumera) 72%, color(golden-tainoi) 84%, color(papaya-whip) 100%);
+
+/* Conffeti Animation Section */
+#conffeti,
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+html
+{
+    background: $bg-gradient;
+    font-size: 10px;
+}
+
+body
+{
+    background-color: transparent;
+    background-image: url('../images/bg-main.jpg'), url('../images/bg-sub.jpg');
+    background-repeat: no-repeat, repeat-y;
+    background-position: center -12rem, center top;
+    background-size: auto, auto;
+    font-family: $font;
+    color: color(black);
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5
+{
+    margin: 0;
+}
+
+p
+{
+    font-size: 1.5rem;
+}
+
+a
+{
+    color: color(cream-brulee);
+
+    &:focus, &:hover
+    {
+        color: color(driftwood);
+        text-decoration: none;
+    }
+}
+
+strong
+{
+    font-weight: 500;
+}
+
+.row
+{
+    &.is-flex
+    {
+        display: flex;
+        flex-wrap: wrap;
+
+        > [class*='col-']
+        {
+            display: flex;
+            margin: 0 -0.1rem;
+        }
+    }
+}
+
+.flex-vertical-center
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#scroll-up
+{
+    background-image: url('../images/scroll-up-btn.png');
+    bottom: 20px;
+    height: 19px;
+    right: 40px;
+    width: 34px;
+}
+
+.logo
+{
+    width: 15%;
+}
+
+/* Main Menu Section */
+.navbar
+{
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+.navbar-right
+{
+    margin-right: 0;
+}
+
+.navbar-default
+{
+    padding: 1rem 0;
+    background-color: color(driftwood) !important;
+    box-shadow: none;
+    border-bottom: 1px solid color(white);
+}
+
+.navbar-default .navbar-nav > li > a
+{
+}
+
+.navbar-default .navbar-nav > li > a:hover
+{
+}
+
+.navbar-default .navbar-nav > li > a:focus
+{
+}
+
+.navbar-default .navbar-nav>.active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus
+{
+}
+
+.nav .open > a, .nav .open > a:focus, .nav .open > a:hover
+{
+    background-color: transparent;
+    border-color: transparent;
+    opacity: .5
+}
+
+.navbar-default .navbar-nav>.open > a, .navbar-default .navbar-nav > .open > a:focus
+{
+    background-color: transparent;
+}
+
+/* Mobile Menu Section */
+.navbar-default .navbar-toggle
+{
+    margin-top: 1rem;
+    border: 0;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover
+{
+    background-color: transparent;
+}
+
+.navbar-default .navbar-toggle .icon-bar
+{
+    background-color: color(black);
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form
+{
+    border: 0;
+}
+
+.navbar-collapse
+{
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.navbar-fixed-top
+{
+    &.scrolled
+    {
+    }
+}
+
+/* Animate Hamburger Menu */
+.navbar-toggle
+{
+    overflow: hidden;
+}
+
+.navbar-toggle .icon-bar
+{
+    transition: opacity, transform;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0.7, 0, 0, 0.7);
+}
+
+.navbar-toggle:not(.collapsed) .icon-bar:nth-child(2)
+{
+    transform: translateY(6px) rotate(45deg);
+}
+
+.navbar-toggle:not(.collapsed) .icon-bar:nth-child(3)
+{
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.navbar-toggle:not(.collapsed) .icon-bar:nth-child(4)
+{
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Language Toggle Section */
+#language-toggle
+{
+    margin: 0.5rem 0 0 5rem;
+
+    a
+    {
+        position: relative;
+        overflow: hidden;
+        padding: 0.8rem 1rem;
+        margin: 0;
+        color: color(white);
+        font-size: 1.7rem;
+        font-weight: 500;
+        text-transform: uppercase;
+
+        &:hover
+        {
+            color: color(cream-brulee) !important;
+            text-decoration: none;
+        }
+
+        &:focus
+        {
+            color: color(cream-brulee) !important;
+            text-decoration: none;
+        }
+    }
+}
+
+/* featured-section */
+#featured-section
+{
+    padding-top: 2rem;
+
+    .featured-image
+    {
+        &.img-responsive
+        {
+            margin: 0 auto;
+            width: 70rem;
+        }
+    }
+}
+
+/* featured-tagline-section */
+#featured-tagline-section
+{
+    margin: 5rem 0;
+
+    .featured-tagline
+    {
+        padding: 1rem;
+        background-color: rgba(color(zeus), 0.8);
+        text-align: center;
+        border: 2px solid color(cream-brulee);
+        border-image: $gold-gradient;
+        border-image-slice: 1;
+
+        h1
+        {
+            padding: 0;
+            margin: 0;
+            color: color(white);
+            font-size: 3rem;
+            font-weight: 100;
+            line-height: 1.3;
+        }
+    }
+}
+
+/* #packs-available-section */
+#packs-available-section
+{
+    margin-bottom: 5rem;
+    text-align: center;
+
+    h2
+    {
+        margin-bottom: 0.2rem;
+        color: color(white);
+        font-size: 5.8rem;
+        font-weight: 500;
+    }
+
+    .amper
+    {
+        font-size: 5rem;
+    }
+
+    p
+    {
+        margin-bottom: 0;
+        color: color(white);
+        font-size: 2.8rem;
+        font-weight: 400;
+    }
+}
+
+/* #packs-content-section */
+#packs-content-section
+{
+    margin-bottom: 5rem;
+
+    .packs
+    {
+        flex: 1;
+        padding: 3rem 2rem;
+        background-color: rgba(color(white), 0.9);
+
+        ul
+        {
+            padding: 0 0 0 4rem;
+            margin: 0;
+        }
+
+        li
+        {
+            margin-bottom: 1rem;
+            color: color(tango);
+
+            &:last-child
+            {
+                margin-bottom: 0;
+            }
+
+            .pack-type
+            {
+                display: block;
+                font-size: 2.2rem;
+                font-weight: 700;
+            }
+
+            .pack-detail
+            {
+                display: block;
+                font-size: 2.2rem;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .pack-amount
+    {
+        margin-bottom: 3rem;
+
+        img
+        {
+            margin: 0 auto;
+        }
+    }
+
+    #pack-10
+    {
+        margin-left: 14rem;
+        border: 4px solid color(tango);
+    }
+
+    #pack-20
+    {
+        margin-right: 14rem;
+        border: 4px solid color(cardinal);
+
+        li
+        {
+            color: color(cardinal);
+        }
+    }
+}
+
+/* #spa-banner-section */
+#spa-banner-section
+{
+    margin: 0 auto 5rem;
+
+    #spa-banner
+    {
+        padding: 3rem;
+        margin: 0 auto;
+        background: url('../images/spa-banner.jpg') no-repeat center center / cover;
+    }
+
+    .spa-header
+    {
+        margin-bottom: 1.5rem;
+    }
+
+    .spa-btn
+    {
+        display: block;
+        padding: 1.5rem 1rem;
+        background-color: color(sun);
+        font-size: 1.7rem;
+        color: color(black);
+        font-weight: 700;
+        text-align: center;
+        border-radius: 3rem;
+        border: 2px solid color(white);
+        box-shadow: 0px 3px 10px rgba(color(abbey), 0.6);
+
+        &:hover
+        {
+            color: color(white);
+            text-decoration: none;
+        }
+    }
+}
+
+#outlet-extended-hours-section
+{
+    margin-bottom: 4rem;
+}
+
+#phone-extended-hours-section
+{
+    margin-bottom: 4rem;
+}
+
+/* .extended-operating-hours */
+.extended-operating-hours
+{
+    h2
+    {
+        margin-bottom: 2.5rem;
+        font-size: 2.3rem;
+        font-weight: 400;
+        color: color(golden-tainoi);
+        text-align: center;
+    }
+
+    .hours-table
+    {
+        .header-row
+        {
+            background-color: color(cream-brulee);
+            border-bottom: 2px solid color(cream-brulee);
+            border-image: $gold-gradient;
+            border-image-slice: 1;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+
+            p
+            {
+                color: color(black);
+                font-size: 1.9rem;
+                font-weight: 700;
+            }
+        }
+
+        .column
+        {
+            padding: 1.5rem 0.5rem;
+            margin: 0;
+            border: 0;
+        }
+
+        .content-row
+        {
+            background-color: color(white);
+            color: color(black);
+        }
+
+        .content-row:nth-child(odd)
+        {
+            background-color: color(papaya-whip);
+        }
+
+        .content-row:last-child
+        {
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        .highlight
+        {
+            font-weight: 500;
+        }
+
+        p
+        {
+            font-size: 1.8rem;
+            font-weight: 400;
+        }
+    }
+
+    .disclaimer
+    {
+        margin: 3rem 0 0;
+        color: color(white);
+        font-size: 1.7rem;
+        font-weight: 400;
+        text-align: center;
+    }
+}
+
+/* #footer-section */
+#footer-section
+{
+    padding: 2rem 0;
+    background-color: color(zeus);
+
+    .footer
+    {
+        margin: 0 auto;
+    }
+
+    p
+    {
+        margin: 0;
+        font-size: 1.1rem;
+        color: color(white);
+    }
+}
+
+#footer-logo-section
+{
+    padding: 0;
+    background-color: color(white);
+
+    .img-responsive
+    {
+        margin: 0 auto;
+    }
+}
+
+/* Chinese Page */
+#ch-lang
+{
+    #featured-section
+    {
+        padding-top: 7rem;
+    }
+
+    #packs-available-section
+    {
+        h2
+        {
+            margin-bottom: 0.6rem;
+        }
+    }
+}
+
+/* Media Queries */
+/* Office Bigger Screen */
+@media (max-width: 1600px)
+{
+}
+
+/* Office Laptop */
+@media (max-width: 1366px)
+{
+}
+
+@media (max-width: 1280px)
+{
+}
+
+@media (max-width: 1199px)
+{
+    #packs-content-section
+    {
+        #pack-10
+        {
+            margin-left: 0;
+        }
+
+        #pack-20
+        {
+            margin-right: 0;
+        }
+    }
+}
+
+@media (max-width: 1024px)
+{
+    body
+    {
+        background-size: contain, auto;
+    }
+}
+
+/* Mobile Navigation */
+@media (max-width: 991px)
+{
+    html
+    {
+        font-size: 9px;
+    }
+
+    body
+    {
+        background-position: center top, center top;
+    }
+
+    #main-logo
+    {
+        margin-top: 0.25rem;
+
+        > img
+        {
+            height: 4rem;
+        }
+    }
+
+    #packs-content-section
+    {
+        .pack-amount
+        {
+            img
+            {
+                width: 25rem;
+            }
+        }
+    }
+
+    #spa-banner-section
+    {
+        .spa-btn-outlet
+        {
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+@media (max-width: 960px)
+{
+}
+
+@media (max-width: 768px)
+{
+}
+
+@media (max-width: 767px)
+{
+    .navbar-header
+    {
+        float: left;
+    }
+
+    .navbar-right
+    {
+        float: right !important;
+    }
+
+    .navbar-nav > li
+    {
+        float: left;
+    }
+
+    #main-logo
+    {
+        margin-left: 2rem;
+    }
+
+    #pack-10
+    {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 640px)
+{
+    html
+    {
+        font-size: 8px;
+    }
+
+    #phone-extended-hours-section
+    {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 480px)
+{
+    #featured-section
+    {
+        padding-top: 9rem;
+    }
+
+    #featured-tagline-section
+    {
+        margin: 3.5rem 0;
+
+        .featured-tagline
+        {
+            h1
+            {
+                font-size: 2.5rem;
+            }
+        }
+    }
+
+    #packs-available-section
+    {
+        margin-bottom: 3.5rem;
+
+        h2
+        {
+            font-size: 4rem;
+        }
+
+        p
+        {
+            font-size: 2.3rem;
+        }
+    }
+
+    #packs-content-section
+    {
+        margin-bottom: 3.5rem;
+    }
+
+    #spa-banner-section
+    {
+        margin-bottom: 4rem;
+
+        #spa-banner
+        {
+            background-position: center right;
+        }
+
+        .spa-header
+        {
+            width: 45rem;
+        }
+    }
+
+    #outlet-extended-hours-section
+    {
+        margin-bottom: 3rem;
+    }
+
+    .extended-operating-hours
+    {
+        .hours-table
+        {
+            .column
+            {
+                padding: 1.2rem 0;
+            }
+        }
+
+        br
+        {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 414px)
+{
+}
+
+@media (max-width: 375px)
+{
+    #featured-tagline-section
+    {
+        margin: 3rem 0;
+    }
+}
+
+@media (max-width: 360px)
+{
+}
+
+@media (max-width: 320px)
+{
+}
