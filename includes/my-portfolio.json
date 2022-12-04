@@ -226,7 +226,7 @@
             "desc": "",
             "task": "Front and backend development",
             "skills": "PHP, HTML, CSS, jQuery",
-            "link": "",
+            "link": "https://tum-asia.edu.sg/students/index.php",
             "slug": "tum-asia-student-life",
             "screen_name": "tumsp",
             "screen_total": 5
@@ -794,14 +794,47 @@
         },
         {
             "id": 73,
-            "name": "Betting Behaviour Self-Assessment 20",
+            "name": "Safer Play",
+            "desc": "<p>Ensuring a fair and safe gambling experience to protect our customers</p>",
+            "task": "Front end development",
+            "skills": "HTML, CSS, Vue.js",
+            "link": "https://www.singaporepools.com.sg/ms/sp/en/index.html",
+            "slug": "safer-play",
+            "screen_name": "saferplay",
+            "screen_total": 4
+        },
+        {
+            "id": 74,
+            "name": "Betting Behaviour Self-Assessment 2020",
             "desc": "<p>For customer to determine their betting behaviour</p>",
             "task": "Front end development",
             "skills": "HTML, CSS, Vue.js",
-            "link": "http://www.singaporepools.com.sg/ms/rg/en/index.html",
+            "link": "https://www.singaporepools.com.sg/ms/sp/en/self-assessment.html",
             "slug": "betting-behaviour-self-assessment-20",
             "screen_name": "bettingbsa20",
             "screen_total": 5
+        },
+        {
+            "id": 75,
+            "name": "Affordability Calculator",
+            "desc": "<p>Calculate your financial risk</p>",
+            "task": "Front end development",
+            "skills": "HTML, CSS, Vue.js",
+            "link": "https://www.singaporepools.com.sg/ms/sp/en/affordability-calculator.html",
+            "slug": "affordability-calculator",
+            "screen_name": "affordcal",
+            "screen_total": 3
+        },
+        {
+            "id": 76,
+            "name": "Euro Champ 2020",
+            "desc": "<p>The best of Europe battle</p>",
+            "task": "Front end development",
+            "skills": "HTML, CSS, Vue.js",
+            "link": "https://www.singaporepools.com.sg/ms/ec20/en/index.html",
+            "slug": "euro-champ-20",
+            "screen_name": "eurochamp20",
+            "screen_total": 4
         }
     ]
 }

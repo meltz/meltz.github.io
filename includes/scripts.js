@@ -1,56 +1,59 @@
-Vue.mixin ({
-    data() {
-        return {
-            // jsonFiles: 'http://192.168.86.22:8080/includes/my-portfolio.json',
-            jsonFiles: 'https://meltz.github.io/includes/my-portfolio.json',
-            myPortfolio: [],
-            loading: true,
-            errored: false,
-            portfolioFolder: 'portfolio',
-            skeleton: 10
-        }
-    },
-    mounted() {
-        axios
-            .get(this.jsonFiles)
-            .then(response => this.myPortfolio = response.data.projects)
-            .catch(error => {
-                console.log(error)
-                this.errored = true
-            })
-            .finally(()=> this.loading = false)
-    }
-})
+Vue.mixin({
+  data() {
+    return {
+      //   jsonFiles: 'http://192.168.86.23:8080/includes/my-portfolio.json',
+      jsonFiles: 'https://meltz.github.io/includes/my-portfolio.json',
+      myPortfolio: [],
+      loading: true,
+      errored: false,
+      portfolioFolder: 'portfolio',
+      skeleton: 10,
+    };
+  },
+  mounted() {
+    axios
+      .get(this.jsonFiles)
+      .then((response) => (this.myPortfolio = response.data.projects))
+      .catch((error) => {
+        console.log(error);
+        this.errored = true;
+      })
+      .finally(() => (this.loading = false));
+  },
+});
 
 Vue.component('topnav', {
-    props: ['display','project'],
-    data() {
-        return {
-            previousID: 0,
-            previousSlug: '',
-            nextID: 0,
-            nextSlug: ''
-        }
+  props: ['display', 'project'],
+  data() {
+    return {
+      previousID: 0,
+      previousSlug: '',
+      nextID: 0,
+      nextSlug: '',
+    };
+  },
+  computed: {
+    getPreviousID() {
+      return (this.previousID = this.project - 1);
     },
-    computed: {
-        getPreviousID() {
-            return this.previousID = this.project - 1
-        },
-        getPreviousSlug() {
-            return this.previousSlug = this.myPortfolio.filter(project => project.id === this.previousID).map(filteredObj => filteredObj.slug)
-        },
-        getNextID() {
-            return this.nextID = this.project + 1
-        },
-        getNextSlug() {
-            return this.nextSlug = this.myPortfolio.filter(project => project.id === this.nextID).map(filteredObj => filteredObj.slug)
-        },
-        getTotalProject() {
-            return this.myPortfolio.length
-        },
+    getPreviousSlug() {
+      return (this.previousSlug = this.myPortfolio
+        .filter((project) => project.id === this.previousID)
+        .map((filteredObj) => filteredObj.slug));
     },
-    template:
-    `<nav id="top-nav-section" class="sticky-top">
+    getNextID() {
+      return (this.nextID = this.project + 1);
+    },
+    getNextSlug() {
+      return (this.nextSlug = this.myPortfolio
+        .filter((project) => project.id === this.nextID)
+        .map((filteredObj) => filteredObj.slug));
+    },
+    getTotalProject() {
+      return this.myPortfolio.length;
+    },
+  },
+  template: `<nav id="top-nav-section" class="sticky-top">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-6">
@@ -78,13 +81,12 @@ Vue.component('topnav', {
                 </div>
             </div>
         </div>
-    </nav><!-- #top-nav-section -->`
-})
+    </nav><!-- #top-nav-section -->`,
+});
 
 Vue.component('page-not-found', {
-    props: ['backBtn'],
-    template:
-    `<div class="page-not-found">
+  props: ['backBtn'],
+  template: `<div class="page-not-found">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-5">
@@ -95,17 +97,16 @@ Vue.component('page-not-found', {
                 </div>
             </div>
         </div>
-    </div><!-- .page-not-found -->`
-})
+    </div><!-- .page-not-found -->`,
+});
 
 const Home = {
-    computed: {
-        latestProjects() {
-            return this.myPortfolio.reverse()
-        }
+  computed: {
+    latestProjects() {
+      return this.myPortfolio.reverse();
     },
-    template:
-    `<div id="main-section" v-cloak>
+  },
+  template: `<div id="main-section" v-cloak>
         <topnav :display="false"></topnav>
         <div v-if="!this.errored">
             <div id="portfolio-section">
@@ -146,17 +147,18 @@ const Home = {
         <div v-else>
             <page-not-found :back-btn="false"></page-not-found>
         </div>
-    </div><!-- #main-section -->`
-}
+    </div><!-- #main-section -->`,
+};
 
 const Project = {
-    computed: {
-        filterProject() {
-            return this.myPortfolio.filter(project => project.slug == this.$route.params.slug)
-        }
+  computed: {
+    filterProject() {
+      return this.myPortfolio.filter(
+        (project) => project.slug == this.$route.params.slug
+      );
     },
-    template:
-    `<div id="main-section" v-cloak>
+  },
+  template: `<div id="main-section" v-cloak>
         <div v-if="!this.loading">
             <div v-if="filterProject && filterProject.length">
                 <div v-for="project in filterProject">
@@ -190,43 +192,43 @@ const Project = {
                 <page-not-found :back-btn="true"></page-not-found>
             </div>
         </div>
-    </div><!-- #main-section -->`
-}
+    </div><!-- #main-section -->`,
+};
 
-const router = new VueRouter ({
-    routes: [
-        {
-            path: '/',
-            name: 'home',
-            component: Home,
-        },
-        {
-            path: '/project/:slug',
-            name: 'project',
-            component: Project,
-        },
-        {
-            path: '*',
-            name: 'redirect-home',
-            component: Home
-        },
-        {
-            path: '/404',
-            name: 'not-found',
-            component: Home
-        }
-    ],
-    scrollBehavior(to, from, savedPosition) {
-        return { x: 0, y: 0 }
-    }
-})
+const router = new VueRouter({
+  routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: Home,
+    },
+    {
+      path: '/project/:slug',
+      name: 'project',
+      component: Project,
+    },
+    {
+      path: '*',
+      name: 'redirect-home',
+      component: Home,
+    },
+    {
+      path: '/404',
+      name: 'not-found',
+      component: Home,
+    },
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    return { x: 0, y: 0 };
+  },
+});
 
-const app = new Vue ({
-    router,
-    methods: {
-        getYear() {
-            var today = new Date();
-            return today.getFullYear();
-        }
-    }
-}).$mount('#app')
+const app = new Vue({
+  router,
+  methods: {
+    getYear() {
+      var today = new Date();
+      return today.getFullYear();
+    },
+  },
+}).$mount('#app');
